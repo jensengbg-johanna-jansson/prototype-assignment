@@ -1,0 +1,102 @@
+<template>
+  <div id="startPage">
+    <section id="header">
+      <div id="imgLogo">
+        <img class="logo" alt="logo" src="../assets/logo.png">
+      </div>
+
+      <div id="acc">
+        <img class="acc" alt="account" src="../assets/account.png">
+      </div>
+
+      <div id="out">
+        <img class="out" alt="log out" src="../assets/out.png">
+      </div>
+    </section>
+
+    <main id="items">
+      <section id="travel">
+        <img class="travel" alt="add travel" src="../assets/travel.png">
+        <button>add travel</button>
+      </section>
+
+      <section id="aid">
+        <img class="aid" alt="first aid" src="../assets/aid.png">
+        <button>first aid</button>
+      </section>
+
+      <section id="history">
+        <img class="history" alt="travel history" src="../assets/history.png">
+        <button>travel history</button>
+      </section>
+
+      <section id="settings">
+        <img class="settings" alt="settings" src="../assets/settings.png">
+        <button>settings</button>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+  </div>
+</template>
+
+<script>
+// import Login from '@/components/Login.vue'
+
+export default {
+  name: 'StartPage',
+  components: {}
+}
+</script>
+
+<style lang="scss">
+#startPage {
+  // display: grid;
+  font-family: $font;
+}
+
+.logo {
+  width: 9rem;
+  height: 8rem;
+}
+
+button {
+  width: 13.5rem;
+  height: 2.5rem;
+  
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  border-radius: 6rem;
+  border-color: $primary;
+  background: $primary;
+
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  margin-top: 7rem;
+}
+
+#items {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  margin: 3rem;
+  padding: 2rem;
+
+}
+
+#items section {
+  margin: 1rem;
+  width: 10rem;
+  height: 9.5rem;
+  border-radius: 1.5rem;
+  background-color: $primary;
+
+  justify-self: center;
+}
+
+
+
+
+</style>
