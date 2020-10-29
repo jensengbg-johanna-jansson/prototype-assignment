@@ -26,7 +26,7 @@ export default {
         }
         &-marker {
             font-size: 1.25rem;
-            color: $primaryColor;             
+            color: $primary;             
         }
         .pulse {
             position: absolute;
@@ -37,8 +37,8 @@ export default {
             width: 2rem;
             height: 2rem;
             border-radius: 5rem;
-            border: 3px solid $secondaryColor;
-            //background: rgba($color: $secondaryColor, $alpha: .5);
+            border: 3px solid $secondary;
+            //background: rgba($color: $secondary, $alpha: .5);
 
             animation: pulse 2s ease-in-out infinite;
         }

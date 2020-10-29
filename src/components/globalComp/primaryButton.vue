@@ -14,13 +14,13 @@ export default {
 <style lang="scss" scoped>
     .primary-button {
         @include button();
-        background: $primaryColor;
+        background: $primary;
     }
     .primary-button:focus {
         outline: none;
     }
     .primary-button:active {
-        background: $primaryColorDark;
+        background: $primaryDark;
         box-shadow: none;
     }
 </style>

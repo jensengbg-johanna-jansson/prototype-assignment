@@ -35,7 +35,7 @@ export default {
 
         svg {
             path {
-                stroke: $secondaryColor; 
+                stroke: $secondary; 
                 stroke-width: 5px; 
             }
         }
@@ -44,7 +44,7 @@ export default {
             bottom: 505px;
             left: 90px;
             font-size: 3.125rem;
-            color: $primaryColor;
+            color: $primary;
         }
         &-ambulance-marker {
             position: absolute;

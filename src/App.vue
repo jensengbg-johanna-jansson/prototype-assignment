@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 #app {
-  font-family: $fontFamily;
+  font-family: $font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

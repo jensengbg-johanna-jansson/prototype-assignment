@@ -1,7 +1,8 @@
-$fontFamily: 'Roboto', sans-serif;
-$primaryColor: #EC2329;
-$primaryColorDark: #C61E23;
-$secondaryColor: #1FAB55;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+$font: 'Roboto', sans-serif;
+$primary: #EC2329;
+$primaryDark: #C61E23;
+$secondary: #1FAB55;
 
 @mixin centeredFlex {
     display: flex;
@@ -16,7 +17,7 @@ $secondaryColor: #1FAB55;
     color: #ffffff;
     font-size: 1.25rem;
     font-weight: 900;
-    font-family: $fontFamily;
+    font-family: $font;
     box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
     text-transform: uppercase;
     border: none;
