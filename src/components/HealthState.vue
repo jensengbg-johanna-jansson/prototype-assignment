@@ -4,7 +4,7 @@
       <h3 class="bold">{{ status }}</h3>
       <p class="description">{{ description }}</p>
     </div>
-    <input type="radio" name="" id="">
+    <input type="checkbox" name="" id="">
   </section>
 </template>
 
@@ -43,6 +43,18 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
+    color: #777;
+
+    h3 {
+      color: #222;
+    }
+  }
+
+  input[type="checkbox"] {
+    background: red;
+    height: 28px;
+    width: 28px;
+    border: none; 
   }
 }
 
