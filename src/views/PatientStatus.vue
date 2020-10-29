@@ -8,7 +8,7 @@
       </nav>
       <section class="content">
         <h1>Pick up</h1>
-        <p class="info">Check all that applise to the patient:</p>
+        <p class="info">Check all that applise to the patient</p>
         <ul>
           <li v-for="status in medicalStatus" :key="status.name">
             <HealthState :status="status.lable" :description="status.description"/>
@@ -48,6 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 $main-color: rgb(200, 54, 41);
+$shadow: 0px 6px 10px #0004;
+
 @mixin flex() {
     display: flex;
     align-items: flex-start;
@@ -82,6 +84,7 @@ $main-color: rgb(200, 54, 41);
         font-weight: bold;
         text-transform: uppercase;
         font-size: .6rem;
+        box-shadow: $shadow;
       }
     }
 
@@ -93,13 +96,13 @@ $main-color: rgb(200, 54, 41);
 
     h1 {
       align-self: center;
-      margin: 1rem 0rem;
       color: #222;
     }
 
     .info {
-      margin: 2rem 0rem 1rem 0rem;
+      margin: 4rem 0rem 1rem 0rem;
       color: #888;
+      font-size: 1.1rem;
     }
 
     ul {
@@ -119,6 +122,7 @@ $main-color: rgb(200, 54, 41);
       font-size: 1rem;
       text-transform: uppercase;
       font-weight: bold;
+      box-shadow: $shadow;
     }
   }
 </style>
