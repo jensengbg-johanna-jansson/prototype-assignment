@@ -12,7 +12,6 @@
   box-sizing: border-box;
 }
 #app {
-  text-align: center;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
