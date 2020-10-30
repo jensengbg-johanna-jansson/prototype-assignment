@@ -90,8 +90,8 @@ export default {
 
                                     setTimeout(() => {
                                         this.directions.shift();
-                                    }, 500);
-                                }, 2100);
+                                    }, 400);
+                                }, 2500);
                             }, 1000);
                         }, 1400);
                     }, 3500);

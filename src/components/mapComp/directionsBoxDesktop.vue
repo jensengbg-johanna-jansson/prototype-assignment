@@ -93,8 +93,8 @@ export default {
 
                                     setTimeout(() => {
                                         this.directions.shift();
-                                    }, 500);
-                                }, 2100);
+                                    }, 400);
+                                }, 2500);
                             }, 1000);
                         }, 1400);
                     }, 3500);
@@ -124,8 +124,9 @@ export default {
         /* Directions text and animation */
         .dir-list-item {
             height: 4.2rem;
-            width: 32vw;
+            width: 26vw;
             background: #ffffff;
+            opacity: .15;
             display: flex;
             justify-content: space-between;
             align-items: center;
