@@ -27,34 +27,40 @@ export default {
 
 .healthState {
   background: #efefef;
+  border-radius: 1rem;
   width: 100%;
   margin: 1.5rem 0rem;
-  padding: 1.5rem;
+  padding: .8rem 1.2rem;
   @include  flex();
   align-items: center;
   justify-content: space-between;
-  border-radius: 1rem;
 
   .info {
     padding: .5rem 0rem;
-    width: 90%;
-    min-height: 5rem;
+    width: 80%;
+    min-height: 6rem;
     @include flex();
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: flex-start;
     color: #777;
 
     h3 {
       color: #222;
+      margin: .6rem 0rem;
+    }
+    
+    p {
+      line-height: 1.4rem;
     }
   }
 
   input[type="checkbox"] {
     background: red;
-    height: 28px;
-    width: 28px;
-    border: none; 
+    height: 30px;
+    width: 30px;
+    border: none;
+    
   }
 }
 
