@@ -1,27 +1,30 @@
 <template>
     <div class="directions">
+        <h2 class="heading-small">directions</h2>
         <transition-group name="dir-list" class="directions-directions" tag="ul">
             <li 
                 v-for="direction in directions" 
                 :key="direction.id"
-                class="dir-list-item">
+                class="dir-list-item directions-card">
                     <p>{{ direction.direction }}</p>
-            </li>
-        </transition-group>
-        <transition-group name="dir-ico-list" class="directions-icons" tag="ul">
-            <li 
-                v-for="direction in directions" 
-                :key="direction.ico"
-                class="dir-ico-list-item">
                     <img class="directions-icon" :src="require(`../../assets/images/${direction.ico}`)" alt="">
             </li>
-        </transition-group>
+        </transition-group>  
+
+        <div class="directions-info">
+            <h3 class="sub-heading">time left</h3>
+            <h3 class="sub-heading">distance left</h3>
+            <h3 class="sub-heading">est. arrival</h3>
+            <p>15 min</p>
+            <p>7.3 km</p>
+            <p>12:57</p>
+        </div>      
     </div>
 </template>
 
 <script>
 export default {
-    name: 'directionsBox',
+    name: 'directionsBoxDesktop',
         data() {
         return {
             directions: [
@@ -107,63 +110,64 @@ export default {
 
 <style lang="scss" scoped>
     .directions {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        height: 4.2rem;
         width: 100%;
-        overflow-y: hidden;
-        background: #ffffff;
-        padding: .7rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
 
+        .heading-small {
+            @include headingSmall();
+        }
         ul {
             list-style-type: none;
+            height: 15rem;
+            overflow: hidden;
         }
         
         /* Directions text and animation */
         .dir-list-item {
-            color: rgba(0, 0, 0, 0);
+            height: 4.2rem;
+            width: 32vw;
+            background: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: .7rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
             font-weight: 500;
             font-size: 1rem;
-            transition: all .8s;
+            transition: transform .4s ease-out, opacity .2s;
+
+            .directions-icon {
+                max-height: 2.5rem;
+            }
         }
         &-directions > :first-child {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #000000;
-            margin-bottom: .3rem;
-            transition: all .2s;
+            opacity: 1;
         }
         &-directions > :nth-child(2) {
-            color: rgba(0, 0, 0, .5);
-            transition: all .8s;
+            opacity: .5;
+        }
+        &-directions > :nth-child(3) {
+            opacity: .25;
         }
         .dir-list-leave-active {
             position: absolute;
         }
         .dir-list-enter, .dir-list-leave-to {
-            opacity: 0;
-            transform: translateX(-.5rem);
-        }
+            transform: translateX(-32vw);
+        }        
         
-        /* Directions icon and animation */
-        .dir-ico-list-item {
-            opacity: 0;
-            transition: all .2s;
-        }
-        &-icon {
-            max-height: 2.5rem;
-        }
-        &-icons > :first-child {
-            opacity: 1;
-        }
-        .dir-ico-list-leave-active {
-            position: absolute;
-        }
-        .dir-ico-list-enter, .dir-ico-list-leave-to {
-            opacity: 0;
-            transform: translateY(-.5rem);
+        &-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: .5rem;
+            border-top: 1px solid $secondary;
+            border-bottom: 1px solid $secondary;
+            padding: .5rem;
+            margin-bottom: 2rem;
+
+            .sub-heading {
+                @include subHeading();
+            }
         }
     } 
 </style>

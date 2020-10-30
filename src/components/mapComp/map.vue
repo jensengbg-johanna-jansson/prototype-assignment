@@ -58,4 +58,34 @@ export default {
             z-index: -1;
         }
     }
+    @media only screen and (min-width: 768px) {
+        .map {
+            width: 70vw;
+            background-image: url("https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/36.751,-1.155,13,0/1082x720?access_token=pk.eyJ1IjoieW9uYWNoYW4iLCJhIjoiY2tnczN5a3VxMGhiaDJza3llNThvYjk3cyJ9.pUv4uQYDSqmDFemCkw3HYA");
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &-container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-wrapper {
+                width: 252px;
+                height: 527px;
+            }
+            .patient-marker {
+                left: 36%;
+                bottom: 95%;
+            }
+            &-ambulance-marker {
+                left: 0%;
+                bottom: 95%;
+            }
+            &-background {
+                display: none;
+            }
+        }
+    }
 </style>

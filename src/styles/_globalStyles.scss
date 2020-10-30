@@ -22,3 +22,24 @@ $secondary: #1FAB55;
     text-transform: uppercase;
     border: none;
 }
+
+@mixin headingLarge {
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+@mixin headingSmall {
+    font-weight: 900;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+@mixin subHeading {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    margin-bottom: .3rem;
+}
