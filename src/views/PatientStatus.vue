@@ -92,7 +92,7 @@ $shadow: 0px 6px 10px #0004;
       width: 100%;
       @include flex();
       flex-direction: column;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
 
     h1 {
       align-self: center;
