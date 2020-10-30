@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import StartPage from '../views/StartPage.vue'
 import Login from '../views/Login.vue'
+// import MobileStartPage from '../views/MobileStartPage.vue'
+
 
 const routes = [
   {
@@ -8,6 +10,11 @@ const routes = [
     name: 'StartPage',
     component: StartPage
   },
+  // {
+  //   path: '/mobile',
+  //   name: 'MobileStartPage',
+  //   component: MobileStartPage
+  // },
   {
     path: '/login',
     name: 'Login',
