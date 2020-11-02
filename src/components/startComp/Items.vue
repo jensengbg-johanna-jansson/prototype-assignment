@@ -4,28 +4,28 @@
       <div id="block">
         <i class="fas fa-ambulance"></i>
       </div>
-      <button class="btnTo">add travel</button>
+      <button class="btnTo button">add travel</button>
     </section>
 
     <section id="aid">
       <div id="block">
         <i class="fas fa-first-aid"></i>
       </div>
-      <button class="btnTo">first aid</button>
+      <button class="btnTo button">first aid</button>
     </section>
 
     <section id="history">
       <div id="block">
         <i class="fas fa-archive"></i>
       </div>
-      <button class="btnTo">travel history</button>
+      <button class="btnTo button">travel history</button>
     </section>
 
     <section id="settings">
       <div id="block">
         <i class="fas fa-cog"></i>
       </div>
-      <button class="btnTo">settings</button>
+      <button class="btnTo button">settings</button>
     </section>
   </div>
 </template>

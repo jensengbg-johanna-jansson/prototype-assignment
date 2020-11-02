@@ -1,33 +1,27 @@
 <template>
   <div id="login">
-    <section v-if="!isMobile()">
-      <Logo />
-    </section>
-    <section v-else>
-      <MobileLogo />
-    </section>
-    <section id="loginForm">
-      <input id="driver-id" type="text" placeholder="Driver ID" />
-      <input id="password" type="text" placeholder="Password" />
-      <button id="btnLogin" @click="login">log in</button>
-      <p class="sign">Sign in with fingerprint</p>
-      <img
-        class="fingerprint"
-        alt="fingerprint"
-        src="../assets/fingerprint.png"
-      />
-      <p class="touch">Touch the fingerprint sensor</p>
-    </section>
+      <img v-if="!isMobile()" id="logo" src="../assets/logo.png">
+      <img v-else id="logo" src="../assets/logo.png" />
+      <div class="form-container">
+        <input id="driver-id" type="text" placeholder="Driver ID" />
+        <input id="password" type="text" placeholder="Password" />
+        <button id="btnLogin" class="button" @click="login">log in</button>
+      </div>
+      <div class="fingerprint-container">
+        <p class="sign">Sign in with fingerprint</p>
+        <img
+          class="fingerprint"
+          alt="fingerprint"
+          src="../assets/fingerprint.png"
+        />
+        <p class="touch">Touch the fingerprint sensor</p>
+      </div>
   </div>
 </template>
 
 <script>
-import MobileLogo from "@/components/mobileStartComp/MobileLogo.vue";
-import Logo from "@/components/startComp/Logo.vue";
-
 export default {
   name: "Login",
-  components: { MobileLogo, Logo },
   methods: {
     login() {
       this.$router.push("/");
@@ -48,16 +42,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#loginForm {
+#login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10%;
+  justify-content: space-between;
+  padding: 4rem 0;
+  min-height: 100vh;
+
+  .form-container, .fingerprint-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   #btnLogin {
     border-color: $primary;
     background: $primary;
-    margin: 5rem;
+    margin: 2rem 0;
   }
 
   input {
@@ -76,17 +78,16 @@ export default {
   .fingerprint {
     width: 5rem;
     height: 6rem;
+    margin: 1.5rem 0;
     cursor: pointer;
   }
 
   p {
     font-size: 16px;
-    margin: 1.5rem;
   }
 
   .touch {
     color: rgba(0, 0, 0, 0.6);
-    margin: 1.7rem;
   }
 }
 </style>

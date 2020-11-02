@@ -1,19 +1,18 @@
 <template>
   <div id="userBlock">
-    <section id="acc">
+    <button class="user-button">
       <img class="acc" alt="account" src="../../assets/account.png" />
-      <span class="txt">Account</span>
-    </section>
-
-    <section id="out">
+      Account
+    </button>   
+    <button class="user-button">
       <img
         @click="logOut"
         class="out"
         alt="log out"
         src="../../assets/out.png"
       />
-      <span class="txt">Log out</span>
-    </section>
+      Log out
+    </button>
   </div>
 </template>
 
@@ -46,16 +45,21 @@ export default {
   #out {
     padding-right: 2rem;
   }
+  .user-button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    font-weight: 500;
+    font-size: 20px;
+  }
   .acc,
   .out {
     width: 3.6rem;
     height: 3.6rem;
     cursor: pointer;
-  }
-
-  .txt {
-    font-weight: 500;
-    font-size: 20px;
   }
 }
 </style>

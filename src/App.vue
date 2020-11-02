@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
     <router-view />
-  </div>
 </template>
 
 <script>
@@ -29,19 +27,17 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
-  // display: flex;
-  // flex-direction: column;
-
-  min-height: 100vh;
-  max-width: 100vw;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;;
+}
+#app {
   background: $white;
   font-family: $font;
   color: $black;
 }
-button {
+.button {
   width: 13.5rem;
   height: 2.5rem;
   
