@@ -40,13 +40,17 @@
                 </form>
             </section>
         </section>
-        <button id="submit-button">Add</button>
+        <button @click="goToPickUp()" id="submit-button">Add</button>
     </section>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        goToPickUp() {
+            this.$router.push({ path: 'pickup' });
+        }
+    }
 }
 </script>
 
@@ -69,7 +73,7 @@ export default {
         border-bottom: 1px solid $primary;
         width: 10rem;
         margin: 1rem;
-        text-transform: uppercase:
+        text-transform: uppercase;
     }
 
     .form {

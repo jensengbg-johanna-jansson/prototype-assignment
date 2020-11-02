@@ -15,7 +15,7 @@
           </li>
         </ul>
       </section>
-      <button class="cta">send</button>
+      <button @click="goToDropOff()" class="cta">send</button>
   </div>
 </template>
 
@@ -29,18 +29,23 @@ export default {
       return{
       medicalStatus: [
         {
-          lable: "Pre-eclampsia", 
+          lable: "Pre-eclampsia",
           description: "Patient shows sign of pre-eclampsia"
-        }, 
+        },
         {
-          lable: "Sever bleeding", 
+          lable: "Sever bleeding",
           description: "Patient is bleeding at time of pick up"
         },
         {
-          lable: "Severe pain", 
+          lable: "Severe pain",
           description: "Patient has severe pain in"
         }
       ]
+    }
+  },
+  methods: {
+    goToDropOff() {
+      this.$router.push({ path: 'dropoff' });
     }
   }
 }
@@ -69,7 +74,7 @@ $shadow: 0px 6px 10px #0004;
       align-items: center;
       justify-content: flex-end;
 
-      
+
       div {
         background: $main-color;
         padding: 1rem 0rem;

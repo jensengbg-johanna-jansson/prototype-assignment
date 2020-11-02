@@ -2,7 +2,7 @@
     <section class="aside-left">
         <h1>Travel History</h1>
         <section class="history-small">
-            <section class="info selected">
+            <section @click="goToExpandedHistory()" class="info selected">
                 <div class="id">
                     <h4>Patient ID</h4>
                     <p>MUM9033_ISS2n_FAC132</p>
@@ -73,7 +73,11 @@
 
 <script>
 export default {
-
+    methods: {
+        goToExpandedHistory() {
+            this.$router.push({ path: 'travelhistoryexpanded' });
+        }
+    }
 }
 </script>
 
