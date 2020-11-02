@@ -36,16 +36,14 @@
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-evenly;
-
-  // margin: 3rem;
   margin-top: 10%;
   margin-bottom: 10%;
   padding: 5rem;
 
   section:hover {
-    -webkit-transform: scale(1.3);
-    -ms-transform: scale(1.3);
-    transform: scale(1.3);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 

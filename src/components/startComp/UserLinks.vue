@@ -38,6 +38,7 @@ export default {
   section {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   #acc {
