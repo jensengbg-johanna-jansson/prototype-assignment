@@ -84,7 +84,7 @@ export default {
         padding: 0.5rem;
         margin: 1rem;
     }
-    
+
     .input-text:focus {
         outline:none;
     }
