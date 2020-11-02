@@ -83,6 +83,7 @@ export default {
         border-bottom: 2px solid $primary;
         padding: 0.5em;
         margin: 1em;
+        outline: none;
     }
 
     ::placeholder {
