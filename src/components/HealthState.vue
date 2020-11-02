@@ -29,8 +29,8 @@ export default {
   background: #efefef;
   border-radius: 1rem;
   width: 100%;
-  margin: 1.5rem 0rem;
-  padding: .8rem 1.2rem;
+  margin: 1rem 0rem;
+  padding: .6rem 1.2rem;
   @include  flex();
   align-items: center;
   justify-content: space-between;
