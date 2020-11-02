@@ -1,12 +1,24 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import PatientStatus from '../views/PatientStatus.vue'
+import Pickup from '../views/Pickup.vue'
+import Dropoff from '../views/Dropoff.vue'
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/pickup',
+    name: 'Pickup',
+    component: Pickup
+  },
+  {
+    path: '/dropoff',
+    name: 'Dropoff',
+    component: Dropoff
   },
   {
     path: '/about',
