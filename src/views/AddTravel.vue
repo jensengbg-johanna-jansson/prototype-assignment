@@ -40,13 +40,17 @@
                 </form>
             </section>
         </section>
-        <button id="submit-button">Add</button>
+        <button @click="goToPickUp()" id="submit-button">Add</button>
     </section>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        goToPickUp() {
+            this.$router.push({ path: 'pickup' });
+        }
+    }
 }
 </script>
 

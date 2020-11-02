@@ -4,10 +4,10 @@
             <h1 class="heading">Pick up patient</h1>
             <directionsBox :isDropoff="true" class="dropoff-mobile" />
             <directionsBoxDesktop :isDropoff="true" class="dropoff-desktop" />
-            <primaryButton class="dropoff-sidebar-button" :text="'drop off'" />
+            <primaryButton @click="goToHome()" class="dropoff-sidebar-button" :text="'drop off'" />
         </div>
         <directionsMap class="dropoff-map" :showHospital="true" />
-    </section>    
+    </section>
 </template>
 
 <script>
@@ -22,6 +22,11 @@ export default {
         directionsBox,
         directionsBoxDesktop,
         primaryButton
+    },
+    methods: {
+        goToHome() {
+            this.$router.push({ path: '/' });
+        }
     }
 }
 </script>
@@ -50,15 +55,15 @@ export default {
         }
         &-mobile {
             display: flex;
-        }       
+        }
         &-map {
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
-        }       
+        }
     }
-    @media only screen and (min-width: 768px) { 
+    @media only screen and (min-width: 768px) {
         .dropoff {
             padding: 0;
             display: flex;

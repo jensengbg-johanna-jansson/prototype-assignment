@@ -4,10 +4,10 @@
             <h1 class="heading">Pick up patient</h1>
             <directionsBox :isDropoff="false" class="pickup-mobile" />
             <directionsBoxDesktop :isDropoff="false" class="pickup-desktop" />
-            <primaryButton class="pickup-sidebar-button" :text="'pick up'" />
+            <primaryButton @click="goToCheckSymptoms()" class="pickup-sidebar-button" :text="'pick up'" />
         </div>
         <directionsMap :showHospital="false" class="pickup-map" />
-    </section>    
+    </section>
 </template>
 
 <script>
@@ -22,6 +22,11 @@ export default {
         directionsBox,
         directionsBoxDesktop,
         primaryButton
+    },
+    methods: {
+        goToCheckSymptoms() {
+            this.$router.push({ path: 'patient-status' });
+        }
     }
 }
 </script>
@@ -50,15 +55,15 @@ export default {
         }
         &-mobile {
             display: flex;
-        }       
+        }
         &-map {
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
-        }       
+        }
     }
-    @media only screen and (min-width: 768px) { 
+    @media only screen and (min-width: 768px) {
         .pickup {
             padding: 0;
             display: flex;
