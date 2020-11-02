@@ -80,7 +80,7 @@ export default {
 
   i {
     font-size: 4.5rem;
-    color: $white;
+    color: $buttontextcolor;
     margin: 25%;
   }
 }

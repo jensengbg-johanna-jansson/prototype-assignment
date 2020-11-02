@@ -43,8 +43,6 @@ export default {
   }
   #footerLinks {
     display: flex;
-    // flex-direction: row;
-    // justify-content: space-around;
 
     li {
       margin-right: 5rem;
@@ -62,7 +60,7 @@ export default {
       }
     }
     li:hover {
-      color: $black;
+      color: $txtcolor;
     }
   }
 }
