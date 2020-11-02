@@ -41,6 +41,12 @@
   margin-top: 10%;
   margin-bottom: 10%;
   padding: 5rem;
+
+  section:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+  }
 }
 
 #block {
