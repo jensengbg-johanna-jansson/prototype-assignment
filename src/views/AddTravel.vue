@@ -69,6 +69,7 @@ export default {
         border-bottom: 1px solid $primary;
         width: 10em;
         margin: 1em;
+        text-transform: uppercase:
     }
 
     .form {
