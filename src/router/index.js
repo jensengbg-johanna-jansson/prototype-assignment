@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import AddTravel from '../views/AddTravel.vue'
 
 const routes = [
   {
@@ -18,7 +19,7 @@ const routes = [
   {
     path: '/addtravel',
     name: 'AddTravel',
-    component: () => import('../views/AddTravel.vue')
+    component: AddTravel
   }
 ]
 
