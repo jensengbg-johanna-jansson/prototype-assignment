@@ -44,9 +44,7 @@ export default {
     }
 
     h1 {
-        color: $txtcolor;
-        font-family: $font;
-        font-size: $titlesize;
+        @include headingLarge();
     }
 
     .subtitle {
@@ -55,13 +53,9 @@ export default {
     }
 
     h4 {
-        color: $txtcolor;
-        font-family: $font;
-        font-size: $subtitlesize;
+        @include headingSmall();
         border-bottom: 1px solid $primary;
         width: 10rem;
-        margin: 1rem;
-        text-transform: uppercase;
     }
 
     .form {

@@ -26,6 +26,11 @@ export default {
         display: grid;
         grid-template-columns: 1fr;
     }
+    .aside-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .aside-right {
         display: none;
@@ -35,10 +40,6 @@ export default {
         #container {
             display: grid;
             grid-template-columns: 1fr 2fr;
-        }
-
-        .aside-left {
-            grid-column: 1 / 2;
         }
 
         .aside-right {

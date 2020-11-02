@@ -83,10 +83,7 @@ export default {
     }
 
     h1 {
-        margin: 2rem;
-        font-size: $titlesize;
-        font-family: $font;
-        font-weight: black;
+        @include headingLarge();
     }
 
     .history-small {
@@ -115,10 +112,7 @@ export default {
     }
 
     h4 {
-        margin: 0;
-        margin-top: 0.5rem;
-        font-size: $subtitlesize;
-        font-family: $font;
+        @include subHeading();
     }
 
     p {

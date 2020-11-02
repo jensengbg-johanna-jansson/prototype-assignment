@@ -72,20 +72,15 @@ export default {
     }
 
     h1 {
-        font-family: $font;
-        font-weight: black;
-        font-size: $titlesize;
+        @include headingLarge();
         display: flex;
-        justify-content: flex-start;
         margin: 0;
     }
 
     h2 {
+        @include headingSmall();
         display: flex;
         justify-content: center;
-        font-family: $font;
-        font-weight: medium;
-        font-size: 22px;
         border-bottom: 1px solid $primary;
         width: 14rem;
         margin: auto;
@@ -93,10 +88,7 @@ export default {
     }
 
     h4 {
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 0.5rem;
-        margin-left: 2rem;
+        @include subHeading();
     }
 
     p {

@@ -98,7 +98,7 @@ $shadow: 0px 6px 10px #0004;
 
     h1 {
       align-self: center;
-      color: #222;
+      @include headingLarge();
     }
 
     .info {
