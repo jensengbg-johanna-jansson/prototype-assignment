@@ -1,8 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-$font: 'Roboto', sans-serif;
+// Base colors
 $primary: #EC2329;
-$primaryDark: #C61E23;
 $secondary: #1FAB55;
+$primaryDark: #C61E23;
+
+// Texts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+$txtcolor: #000000;
+$font: 'Roboto', sans-serif;
+$titlesize: 36px;
+$subtitlesize: 20px;
+$txtsize: 16px;
+$placeholdersize: 16px;
+
+// Buttons
+
+$borderradius: 60px;
+$buttontextsize: 20px;
+$buttontextcolor: #FFFFFF;
 
 @mixin centeredFlex {
     display: flex;
