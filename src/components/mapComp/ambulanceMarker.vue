@@ -1,7 +1,7 @@
 <template>
-    <div class="ambulance">
+    <div class="ambulance" :class="{ reverseAnimation: isDropoff }">
         <div class="ambualnce-wrapper">
-            <i class="fas fa-ambulance ambulance-marker"></i>
+            <i class="fas fa-ambulance ambulance-marker" ></i>
             <span class="pulse"></span>
         </div>
     </div>
@@ -9,7 +9,10 @@
 
 <script>
 export default {
-    name: 'ambulanceMarker'
+    name: 'ambulanceMarker',
+    props: {
+        isDropoff: Boolean
+    }
 }
 </script>
 
@@ -41,6 +44,10 @@ export default {
 
             animation: pulse 2s ease-in-out infinite;
         }
+    }
+    .reverseAnimation {
+        animation: animateRouteMarker 10s linear backwards reverse; 
+        animation-delay: 3s;
     }
     @keyframes animateRouteMarker {
         100% { 

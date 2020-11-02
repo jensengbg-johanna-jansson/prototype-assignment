@@ -1,12 +1,12 @@
 <template>
-    <section class="pickup">
-        <div class="pickup-sidebar">
+    <section class="dropoff">
+        <div class="dropoff-sidebar">
             <h1 class="heading">Pick up patient</h1>
-            <directionsBox :isDropoff="false" class="pickup-mobile" />
-            <directionsBoxDesktop :isDropoff="false" class="pickup-desktop" />
-            <primaryButton class="pickup-sidebar-button" :text="'pick up'" />
+            <directionsBox :isDropoff="true" class="dropoff-mobile" />
+            <directionsBoxDesktop :isDropoff="true" class="dropoff-desktop" />
+            <primaryButton class="dropoff-sidebar-button" :text="'drop off'" />
         </div>
-        <directionsMap :showHospital="false" class="pickup-map" />
+        <directionsMap class="dropoff-map" :showHospital="true" />
     </section>    
 </template>
 
@@ -16,7 +16,7 @@ import directionsBox from '../components/mapComp/directionsBox';
 import directionsBoxDesktop from '../components/mapComp/directionsBoxDesktop';
 import primaryButton from '../components/globalComp/primaryButton';
 export default {
-    name: 'Pickup',
+    name: 'dropoff',
     components: {
         directionsMap,
         directionsBox,
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .pickup {
+    .dropoff {
         height: 100vh;
         width: 100vw;
         padding: 2rem .5rem;
@@ -59,7 +59,7 @@ export default {
         }       
     }
     @media only screen and (min-width: 768px) { 
-        .pickup {
+        .dropoff {
             padding: 0;
             display: flex;
             justify-content: space-between;

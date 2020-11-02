@@ -22,9 +22,12 @@
 <script>
 export default {
     name: 'directionsBox',
-        data() {
+    props: {
+        isDropoff: Boolean
+    },
+    data() {
         return {
-            directions: [
+            directionsNormal: [
                 { 
                     direction: '48 m turn right',
                     id: 'dir1',
@@ -65,7 +68,58 @@ export default {
                     id: 'dir8',
                     ico: 'goal.svg'
                 }
+            ],
+            directionsReverse: [
+                { 
+                    direction: '230 m turn right',
+                    id: 'dir1',
+                    ico: 'right-turn.svg'
+                },
+                { 
+                    direction: '94 m turn right',
+                    id: 'dir2',
+                    ico: 'right-turn.svg'
+                },
+                { 
+                    direction: '2 km turn right',
+                    id: 'dir3',
+                    ico: 'slight-left-turn.svg'
+                },
+                { 
+                    direction: '750 m turn right',
+                    id: 'dir4',
+                    ico: 'right-turn.svg'
+                },
+                { 
+                    direction: '1.1 km turn left',
+                    id: 'dir5',
+                    ico: 'left-turn.svg'
+                },
+                { 
+                    direction: '2.5 km turn right',
+                    id: 'dir6',
+                    ico: 'right-turn.svg'
+                },
+                { 
+                    direction: '550 m turn left',
+                    id: 'dir7',
+                    ico: 'left-turn.svg'
+                },
+                { 
+                    direction: '48 m destination on the right',
+                    id: 'dir8',
+                    ico: 'goal.svg'
+                }
             ]
+        }
+    },
+    computed: {
+        directions() {
+            if(this.isDropoff) {
+                return this.directionsReverse;
+            } else {
+                return this.directionsNormal;
+            }
         }
     },
     methods: {
@@ -97,10 +151,43 @@ export default {
                     }, 3500);
                 }, 1200);
             }, 3000);
+        },
+        reverseTimer() {
+            setTimeout(() => {
+                this.directions.shift();
+                
+                setTimeout(() => {
+                    this.directions.shift();
+                    
+                    setTimeout(() => {
+                        this.directions.shift();
+                        
+                        setTimeout(() => {
+                            this.directions.shift();
+                            
+                            setTimeout(() => {
+                                this.directions.shift();
+                                
+                                setTimeout(() => {
+                                    this.directions.shift();
+
+                                    setTimeout(() => {
+                                        this.directions.shift();
+                                    }, 1200);
+                                }, 3500);
+                            }, 1400);
+                        }, 1000);
+                    }, 2300);
+                }, 400);
+            }, 3200);
         }
     },
     mounted() {
-        this.startTimer();
+        if(this.isDropoff) {
+            this.reverseTimer();
+        } else {
+            this.startTimer();
+        }
     }
 }
 </script>
