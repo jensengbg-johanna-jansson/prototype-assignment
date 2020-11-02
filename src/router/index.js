@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import StartPage from '../views/StartPage.vue'
+import Login from '../views/Login.vue'
 import AddTravel from '../views/AddTravel.vue'
 import TravelHistory from '../views/TravelHistory.vue'
 import TravelHistoryExpanded from '../views/TravelHistoryExpanded.vue'
@@ -10,8 +11,13 @@ import Dropoff from '../views/Dropoff.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'StartPage',
+    component: StartPage
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
   {
     path: '/addtravel',
