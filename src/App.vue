@@ -1,9 +1,11 @@
 <template>
-  <!--<div id="nav">
+  <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
-    <router-link to="/addtravel">Add Travel</router-link>
-  </div>-->
+    <router-link to="/addtravel">Add Travel</router-link> |
+    <router-link to="/travelhistory">Travel History</router-link> |
+    <router-link to="/travelhistoryexpanded">Travel History Expanded</router-link>
+  </div>
   <router-view/>
 </template>
 

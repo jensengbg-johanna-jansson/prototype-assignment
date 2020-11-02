@@ -19,6 +19,16 @@ const routes = [
     path: '/addtravel',
     name: 'AddTravel',
     component: () => import('../views/AddTravel.vue')
+  },
+  {
+    path: '/travelhistory',
+    name: 'TravelHistory',
+    component: () => import('../views/TravelHistory.vue')
+  },
+  {
+    path: '/travelhistoryexpanded',
+    name: 'TravelHistoryExpanded',
+    component: () => import('../views/TravelHistoryExpanded.vue')
   }
 ]
 
