@@ -4,31 +4,40 @@
       <div id="block">
         <i class="fas fa-ambulance"></i>
       </div>
-      <button class="btnTo button">add travel</button>
+      <primaryButton :text="'add travel'" />
     </section>
 
     <section id="aid">
       <div id="block">
         <i class="fas fa-first-aid"></i>
       </div>
-      <button class="btnTo button">first aid</button>
+      <primaryButton :text="'first aid'" />
     </section>
 
     <section id="history">
       <div id="block">
         <i class="fas fa-archive"></i>
       </div>
-      <button class="btnTo button">travel history</button>
+      <primaryButton :text="'travel history'" />
     </section>
 
     <section id="settings">
       <div id="block">
         <i class="fas fa-cog"></i>
       </div>
-      <button class="btnTo button">settings</button>
+      <primaryButton :text="'settings'" />
     </section>
   </div>
 </template>
+
+<script>
+import primaryButton from '../globalComp/primaryButton'
+export default {
+  components: {
+    primaryButton
+  }
+}
+</script>
 
 <style lang="scss">
 #items {
@@ -60,10 +69,5 @@
     color: $white;
     margin: 25%;
   }
-}
-
-.btnTo {
-  border-color: $primary;
-  background: $primary;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="add-travel-container">
         <h1>Add Travel</h1>
         <section class="desktop-view">
             <section class="patient-view">
@@ -40,17 +40,26 @@
                 </form>
             </section>
         </section>
-        <button id="submit-button">Add</button>
+        <primaryButton :text="'Add'" />
     </section>
 </template>
 
 <script>
+import primaryButton from '../components/globalComp/primaryButton';
 export default {
-
+    components: {
+        primaryButton
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+    .add-travel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     h1 {
         color: $txtcolor;
         font-family: $font;

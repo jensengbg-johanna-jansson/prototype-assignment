@@ -15,15 +15,17 @@
           </li>
         </ul>
       </section>
-      <button class="cta">send</button>
+      <primaryButton :text="'send'" />
   </div>
 </template>
 
 <script>
-import HealthState from '@/components/HealthState.vue'
+import HealthState from '@/components/HealthState.vue';
+import primaryButton from '../components/globalComp/primaryButton.vue'
 export default {
   components: {
-    HealthState
+    HealthState,
+    primaryButton
   },
   data: () => {
       return{
