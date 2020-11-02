@@ -3,8 +3,8 @@
       <img v-if="!isMobile()" id="logo" src="../assets/logo.png">
       <img v-else id="logo" src="../assets/logo.png" />
       <div class="form-container">
-        <input id="driver-id" type="text" placeholder="Driver ID" />
-        <input id="password" type="text" placeholder="Password" />
+        <primaryInput :placeholder="'Driver ID'" />
+        <primaryInput :placeholder="'Password'" />
         <primaryButton :text="'log in'" id="btnLogin" @click="login" />
         
       </div>
@@ -21,11 +21,13 @@
 </template>
 
 <script>
-import primaryButton from '../components/globalComp/primaryButton'
+import primaryButton from '../components/globalComp/primaryButton';
+import primaryInput from '../components/globalComp/primaryInput';
 export default {
   name: "Login",
   components: {
-    primaryButton
+    primaryButton,
+    primaryInput
   },
   methods: {
     login() {
