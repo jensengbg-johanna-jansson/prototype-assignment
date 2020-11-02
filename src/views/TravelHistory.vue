@@ -1,0 +1,49 @@
+<template>
+    <section id="container">
+        <section class="aside-left">
+            <TravelHistorySmall />
+        </section>
+        <section class="aside-right">
+            <TravelHistoryLarge />
+        </section>
+    </section>
+</template>
+
+<script>
+import TravelHistorySmall from "../components/TravelHistorySmall.vue"
+import TravelHistoryLarge from "../components/TravelHistoryLarge.vue"
+
+export default {
+    components: {
+        TravelHistorySmall,
+        TravelHistoryLarge
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+    #container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .aside-right {
+        display: none;
+    }
+
+    @media only screen and (min-width: 768px) {
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        .aside-left {
+            grid-column: 1 / 2;
+        }
+
+        .aside-right {
+            display: block;
+            grid-column: 2 / 3;
+        }
+    }
+</style>
