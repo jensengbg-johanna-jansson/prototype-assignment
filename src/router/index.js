@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 import Home from "../views/Home.vue"
 import PatientStatus from "../views/PatientStatus.vue"
-import Settings from "@/views/Settings.vue"
-import SettingsAbout from "@/views/SettingsAbout.vue"
-import SettingsSupport from "@/views/SettingsSupport.vue"
-import SettingsSecurity from "@/views/SettingsSecurity.vue"
+import Settings from "../views/Settings.vue"
+import SettingsAbout from "../views/SettingsAbout.vue"
+import SettingsSupport from "../views/SettingsSupport.vue"
+import SettingsSecurity from "../views/SettingsSecurity.vue"
 
 const routes = [
   {
