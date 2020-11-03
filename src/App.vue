@@ -1,10 +1,32 @@
 <template>
-    <router-view />
+  <transition name="fade">
+    <NewPatient v-if="openPopUP" @closeNotice="popUp" class="pop-overlay" />
+  </transition>
+  <button @click="popUp" class="btn-pop"></button>
+  <router-view />
 </template>
 
 <script>
+import NewPatient from "@/views/NewPatient.vue";
+
 export default {
-  name: "App"
+  name: "App",
+  components: { NewPatient },
+  data: () => {
+    return {
+      openPopUP: false,
+    };
+  },
+  methods: {
+    popUp() {
+      console.log("wtf")
+      if (this.openPopUP === true) {
+        this.openPopUP = false;
+      } else {
+        this.openPopUP = true;
+      }
+    }
+  }
 };
 </script>
 
@@ -20,17 +42,24 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: $txtcolor;
 }
-.button {
-  width: 13.5rem;
-  height: 2.5rem;
 
-  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-  border-radius: 6rem;
-
-  font-size: 20px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: $white;
+//just for test
+.btn-pop {
+  background-color: blue;
   cursor: pointer;
 }
+.pop-overlay {
+  height: 100vh;
+  position: absolute;
+  background-color: #000000e0;
+  z-index: 1;
+}
+// .fade-enter-active,
+// .fade-leave-active {
+//   transition: opacity 0.2s;
+// }
+// .fade-enter,
+// .fade-leave-to {
+//   opacity: 0,5;
+// }
 </style>

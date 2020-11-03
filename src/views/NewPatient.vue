@@ -2,7 +2,7 @@
   <div id="newPatient">
     <section id="cart">
       <section id="close">
-        <button id="btnClose">
+        <button @click="closeNotice" id="btnClose">
           <i class="far fa-times-circle"></i>
         </button>
         <div id="icon-hospital-user">
@@ -41,6 +41,9 @@ export default {
     toPickUp() {
       this.$router.push("/pickup");
     },
+    closeNotice() {
+      this.$emit("closeNotice");
+    },
   },
 };
 </script>
@@ -75,6 +78,7 @@ export default {
         border: none;
         align-self: flex-end;
         padding: 0.5rem;
+        cursor: pointer;
 
         i {
           font-size: 2.5rem;
@@ -117,6 +121,7 @@ export default {
       .start-travel-btn {
         margin: 1rem;
         background-color: $secondary;
+        cursor: pointer;
       }
     }
   }

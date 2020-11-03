@@ -4,6 +4,8 @@
       <Logo />
       <UserLinks />
       <Items />
+
+
       <Footer />
     </section>
     <section v-else>
@@ -17,6 +19,7 @@ import Logo from "@/components/startComp/Logo.vue";
 import UserLinks from "@/components/startComp/UserLinks.vue";
 import Items from "@/components/startComp/Items.vue";
 import MobileStartPage from "./MobileStartPage.vue";
+
 import Footer from "@/components/startComp/Footer.vue";
 
 export default {
@@ -26,8 +29,10 @@ export default {
     UserLinks,
     Items,
     Footer,
-    MobileStartPage,
+
+MobileStartPage,
   },
+  
   methods: {
     isMobile() {
       if (
@@ -40,13 +45,14 @@ export default {
         return false;
       }
     },
+    
   },
 };
 </script>
 
 <style lang="scss" scoped>
-#startPage {
-  height: 50%;
-  // height: 100vh;
-}
+// #startPage {
+//   height: 50%;
+// }
+
 </style>
