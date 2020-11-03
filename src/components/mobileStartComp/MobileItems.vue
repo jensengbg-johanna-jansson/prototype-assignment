@@ -1,14 +1,14 @@
 <template>
   <div id="mobile-items">
     <section id="sideLeft">
-      <div id="mobile-aid">
+      <div @click="goToFirstAid()" id="mobile-aid">
         <img
           class="mobile-aid"
           alt="first aid"
           src="../../assets/mobile-aid.png"
         />
       </div>
-      <div id="mobile-history">
+      <div @click="goToTravelHistory()" id="mobile-history">
         <img
           class="mobile-history"
           alt="travel history"
@@ -17,7 +17,7 @@
       </div>
     </section>
     <section id="mid">
-      <div id="mobile-travel">
+      <div @click="goToAddTravel()" id="mobile-travel">
         <img
           class="mobile-travel"
           alt="add travel"
@@ -26,14 +26,14 @@
       </div>
     </section>
     <section id="sideRight">
-      <div id="mobile-support">
+      <div @click="goToSupport()" id="mobile-support">
         <img
           class="mobile-support"
           alt="support"
           src="../../assets/mobile-support.png"
         />
       </div>
-      <div id="mobile-settings">
+      <div @click="goToSettings()" id="mobile-settings">
         <img
           class="mobile-settings"
           alt="settings"
@@ -43,6 +43,28 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goToAddTravel() {
+      this.$router.push({ path: 'addtravel' });
+    },
+    goToTravelHistory() {
+      this.$router.push({ path: 'travelhistory' });
+    },
+    goToFirstAid() {
+      this.$router.push({ path: 'firstaid' });
+    },
+    goToSupport() {
+      this.$router.push({ path: 'support' });
+    },
+    goToSettings() {
+      this.$router.push({ path: 'settings' });
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 @media only screen and (max-width: 768px) {

@@ -32,6 +32,7 @@ export default {
     components: {
         primaryButton,
         primaryInput
+    },
     methods: {
         goToPickUp() {
             this.$router.push({ path: 'pickup' });

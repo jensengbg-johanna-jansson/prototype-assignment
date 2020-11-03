@@ -1,27 +1,27 @@
 <template>
   <div id="items">
-    <section id="travel">
+    <section @click="goToAddTravel()" id="travel">
       <div id="block">
         <i class="fas fa-ambulance"></i>
       </div>
       <primaryButton :text="'add travel'" />
     </section>
 
-    <section id="aid">
+    <section @click="goToFirstAid()" id="aid">
       <div id="block">
         <i class="fas fa-first-aid"></i>
       </div>
       <primaryButton :text="'first aid'" />
     </section>
 
-    <section id="history">
+    <section @click="goToTravelHistory()" id="history">
       <div id="block">
         <i class="fas fa-archive"></i>
       </div>
       <primaryButton :text="'travel history'" />
     </section>
 
-    <section id="settings">
+    <section @click="goToSettings()" id="settings">
       <div id="block">
         <i class="fas fa-cog"></i>
       </div>
@@ -35,6 +35,20 @@ import primaryButton from '../globalComp/primaryButton'
 export default {
   components: {
     primaryButton
+  },
+  methods: {
+    goToAddTravel() {
+      this.$router.push({ path: 'addtravel' });
+    },
+    goToTravelHistory() {
+      this.$router.push({ path: 'travelhistory' });
+    },
+    goToFirstAid() {
+      this.$router.push({ path: 'firstaid' });
+    },
+    goToSettings() {
+      this.$router.push({ path: 'settings' });
+    }
   }
 }
 </script>
