@@ -7,6 +7,8 @@ import TravelHistoryExpanded from '../views/TravelHistoryExpanded.vue'
 import PatientStatus from '../views/PatientStatus.vue'
 import Pickup from '../views/Pickup.vue'
 import Dropoff from '../views/Dropoff.vue'
+import NewPatient from '../views/NewPatient.vue'
+
 
 const routes = [
   {
@@ -48,6 +50,11 @@ const routes = [
     path: "/patient-status",
     name: "PatientStatus",
     component: PatientStatus
+  },
+  {
+    path: "/new-patient",
+    name: "NewPatient",
+    component: NewPatient
   }
 ]
 
