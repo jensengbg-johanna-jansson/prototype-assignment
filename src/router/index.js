@@ -13,6 +13,16 @@ const routes = [
     component: Home,
   },
   {
+    path: "/pickup",
+    name: "Pickup",
+    component: Pickup,
+  },
+  {
+    path: "/dropoff",
+    name: "Dropoff",
+    component: Dropoff,
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
