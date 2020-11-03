@@ -15,15 +15,17 @@
           </li>
         </ul>
       </section>
-      <button @click="goToDropOff()" class="cta">send</button>
+      <primaryButton :text="'send'" />
   </div>
 </template>
 
 <script>
-import HealthState from '@/components/HealthState.vue'
+import HealthState from '@/components/HealthState.vue';
+import primaryButton from '../components/globalComp/primaryButton.vue'
 export default {
   components: {
-    HealthState
+    HealthState,
+    primaryButton
   },
   data: () => {
       return{
@@ -101,7 +103,7 @@ $shadow: 0px 6px 10px #0004;
 
     h1 {
       align-self: center;
-      color: #222;
+      @include headingLarge();
     }
 
     .info {

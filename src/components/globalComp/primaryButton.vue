@@ -15,6 +15,7 @@ export default {
     .primary-button {
         @include button();
         background: $primary;
+        transition: all .3s linear;
     }
     .primary-button:focus {
         outline: none;
@@ -23,4 +24,11 @@ export default {
         background: $primaryDark;
         box-shadow: none;
     }
+
+    @media only screen and (min-width: 768px) {
+        .primary-button:hover {
+            background: $primaryDark;
+        }
+    }
+
 </style>

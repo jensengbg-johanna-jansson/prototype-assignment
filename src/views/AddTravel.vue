@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="add-travel-container">
         <h1>Add Travel</h1>
         <section class="desktop-view">
             <section class="patient-view">
@@ -7,21 +7,8 @@
                     <h4>Patient</h4>
                 </div>
                 <form class="form">
-                    <input
-                        id="first-name"
-                        class="input-text"
-                        type="text"
-                        name="name"
-                        placeholder="Firstname"
-                    >
-
-                    <input
-                        id="last-name"
-                        class="input-text"
-                        type="text"
-                        name="name"
-                        placeholder="Lastname"
-                    >
+                    <primaryInput :placeholder="'Firstname'" />
+                    <primaryInput :placeholder="'Lastname'" />
                 </form>
             </section>
 
@@ -30,22 +17,21 @@
                     <h4>Coordinates</h4>
                 </div>
                 <form class="form">
-                    <input
-                        id="coordinates"
-                        class="input-text"
-                        name="coordinates"
-                        type="text"
-                        placeholder="Coordinates"
-                    >
+                    <primaryInput :placeholder="'Coordinates'" />
                 </form>
             </section>
         </section>
-        <button @click="goToPickUp()" id="submit-button">Add</button>
+        <primaryButton :text="'Add'" />
     </section>
 </template>
 
 <script>
+import primaryButton from '../components/globalComp/primaryButton';
+import primaryInput from '../components/globalComp/primaryInput';
 export default {
+    components: {
+        primaryButton,
+        primaryInput
     methods: {
         goToPickUp() {
             this.$router.push({ path: 'pickup' });
@@ -55,10 +41,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    .add-travel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     h1 {
-        color: $txtcolor;
-        font-family: $font;
-        font-size: $titlesize;
+        @include headingLarge();
     }
 
     .subtitle {
@@ -67,36 +57,15 @@ export default {
     }
 
     h4 {
-        color: $txtcolor;
-        font-family: $font;
-        font-size: $subtitlesize;
+        @include headingSmall();
         border-bottom: 1px solid $primary;
         width: 10rem;
-        margin: 1rem;
-        text-transform: uppercase;
     }
 
     .form {
         display: flex;
         justify-content: center;
         flex-direction: column;
-    }
-
-    .input-text {
-        border: none;
-        border-bottom: 2px solid $primary;
-        padding: 0.5rem;
-        margin: 1rem;
-    }
-
-    .input-text:focus {
-        outline:none;
-    }
-
-    ::placeholder {
-        color: $txtcolor;
-        opacity: 50%;
-        font-size: $placeholdersize;
     }
 
     #submit-button {
@@ -128,7 +97,6 @@ export default {
         }
 
         .input-text {
-            width: 30rem;
             margin-bottom: 2rem;
         }
 

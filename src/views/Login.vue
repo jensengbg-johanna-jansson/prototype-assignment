@@ -3,9 +3,10 @@
       <img v-if="!isMobile()" id="logo" src="../assets/logo.png">
       <img v-else id="logo" src="../assets/logo.png" />
       <div class="form-container">
-        <input id="driver-id" type="text" placeholder="Driver ID" />
-        <input id="password" type="text" placeholder="Password" />
-        <button id="btnLogin" class="button" @click="login">log in</button>
+        <primaryInput :placeholder="'Driver ID'" />
+        <primaryInput :placeholder="'Password'" />
+        <primaryButton :text="'log in'" id="btnLogin" @click="login" />
+        
       </div>
       <div class="fingerprint-container">
         <p class="sign">Sign in with fingerprint</p>
@@ -20,8 +21,14 @@
 </template>
 
 <script>
+import primaryButton from '../components/globalComp/primaryButton';
+import primaryInput from '../components/globalComp/primaryInput';
 export default {
   name: "Login",
+  components: {
+    primaryButton,
+    primaryInput
+  },
   methods: {
     login() {
       this.$router.push("/");
@@ -57,8 +64,6 @@ export default {
   }
 
   #btnLogin {
-    border-color: $primary;
-    background: $primary;
     margin: 2rem 0;
   }
 
