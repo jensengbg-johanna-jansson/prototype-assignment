@@ -1,7 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 import Home from "../views/Home.vue"
 import PatientStatus from "../views/PatientStatus.vue"
-import Settings from "@/components/Settings.vue"
+import Settings from "@/views/Settings.vue"
+import SettingsAbout from "@/views/SettingsAbout.vue"
+import SettingsSupport from "@/views/SettingsSupport.vue"
+import SettingsSecurity from "@/views/SettingsSecurity.vue"
 
 const routes = [
   {
@@ -27,6 +30,21 @@ const routes = [
     path: "/settings",
     name: "Settings",
     component: Settings,
+  },
+  {
+    path: "/settings-about",
+    name: "Settings",
+    component: SettingsAbout,
+  },
+  {
+    path: "/settings-support",
+    name: "Settings",
+    component: SettingsSupport,
+  },
+  {
+    path: "/settings-security",
+    name: "Settings",
+    component: SettingsSecurity,
   },
 ]
 
