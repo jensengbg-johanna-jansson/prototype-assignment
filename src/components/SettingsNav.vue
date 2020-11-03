@@ -32,6 +32,7 @@ nav {
     border: none;
     border-radius: 5rem;
     transition: all 0.4s ease;
+    cursor: pointer;
 
     &:hover {
       opacity: 1;
