@@ -1,27 +1,27 @@
 <template>
   <div id="items">
-    <section id="travel">
+    <section @click="goToAddTravel()" id="travel">
       <div id="block">
         <i class="fas fa-ambulance"></i>
       </div>
       <button class="btnTo button">add travel</button>
     </section>
 
-    <section id="aid">
+    <section @click="goToFirstAid()" id="aid">
       <div id="block">
         <i class="fas fa-first-aid"></i>
       </div>
       <button class="btnTo button">first aid</button>
     </section>
 
-    <section id="history">
+    <section @click="goToTravelHistory()" id="history">
       <div id="block">
         <i class="fas fa-archive"></i>
       </div>
       <button class="btnTo button">travel history</button>
     </section>
 
-    <section id="settings">
+    <section @click="goToSettings()" id="settings">
       <div id="block">
         <i class="fas fa-cog"></i>
       </div>
@@ -29,6 +29,25 @@
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goToAddTravel() {
+      this.$router.push({ path: 'addtravel' });
+    },
+    goToTravelHistory() {
+      this.$router.push({ path: 'travelhistory' });
+    },
+    goToFirstAid() {
+      this.$router.push({ path: 'firstaid' });
+    },
+    goToSettings() {
+      this.$router.push({ path: 'settings' });
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #items {

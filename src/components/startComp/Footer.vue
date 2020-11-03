@@ -2,7 +2,7 @@
   <div id="footer">
     <footer>
       <ul id="footerLinks">
-        <li>
+        <li @click="goToSupport()">
           <i class="far fa-question-circle"></i>
           Support
         </li>
@@ -20,7 +20,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goToSupport() {
+      this.$router.push({ path: 'support' });
+    }
+  }
+};
 </script>
 
 <style lang="scss">
