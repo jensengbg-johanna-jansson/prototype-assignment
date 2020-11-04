@@ -100,14 +100,14 @@ export default {
 
     .caller {
       width: 160px;
-      padding: 2rem;
-      margin: 2rem 0rem;
+      padding: 2.4rem 1rem;
+      margin: 1rem 0rem;
       border-radius: 5rem;
       background: #e2e2e2;
       @include flex();
 
       img {
-        width: 100px;
+        width: 80px;
         opacity: 0.4;
       }
     }
@@ -123,7 +123,7 @@ export default {
       border: none;
       padding: 2rem;
       border-radius: 5rem;
-      opacity: 0.7;
+      opacity: 0.6;
       cursor: pointer;
       transition: all 0.4s ease;
 
@@ -132,7 +132,7 @@ export default {
       }
 
       img {
-        width: 46px;
+        width: 32px;
       }
     }
 
@@ -142,8 +142,8 @@ export default {
       flex-wrap: wrap;
       justify-content: center;
       width: 26rem;
-      padding: 1rem;
-      margin: 1rem 0rem;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem 0rem;
     }
 
     .hangup {
