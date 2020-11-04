@@ -114,6 +114,10 @@ export default {
       }
 
       select {
+        appearance: none;
+      }
+
+      select {
         padding: 1rem 1.5rem;
       }
     }
