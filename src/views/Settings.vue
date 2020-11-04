@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <SettingsNav />
-    <h3>Settings</h3>
+    <h2>Settings</h2>
     <ul>
       <li>
         <select name="languages" id="">
@@ -14,13 +14,13 @@
         </select>
       </li>
       <li>
-        <button class="btn">security</button>
+        <button class="btn" @click="navToSecurity">security</button>
       </li>
       <li>
         <button class="btn">support</button>
       </li>
       <li>
-        <button class="btn">about</button>
+        <button class="btn" @click="navToAbout">about</button>
       </li>
       <li>
         <section class="switches">
@@ -54,6 +54,14 @@ export default {
   components: {
     SettingsNav,
   },
+  methods: {
+    navToAbout: function() {
+      this.$router.push("/settings-about")
+    },
+    navToSecurity: function() {
+      this.$router.push("/settings-security")
+    },
+  },
 }
 </script>
 
@@ -69,13 +77,13 @@ export default {
   @include flex();
   flex-direction: column;
 
-  h3 {
+  h2 {
     color: #222;
     margin-top: 2rem;
   }
 
   ul {
-    padding: 1rem;
+    padding: 1rem 2rem;
     width: 100%;
     list-style: none;
 
