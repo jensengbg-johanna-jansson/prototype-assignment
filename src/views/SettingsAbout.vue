@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <SettingsNav />
-    <h2>About</h2>
+    <SettingsHeader title="about" />
     <section class="content">
       <article>
         <button>data policy</button>
@@ -70,10 +70,13 @@
 </template>
 
 <script>
-import SettingsNav from "@/components/SettingsNav.vue"
+import SettingsNav from "@/components/settingsComp/SettingsNav.vue"
+import SettingsHeader from "@/components/settingsComp/SettingsHeader.vue"
+
 export default {
   components: {
     SettingsNav,
+    SettingsHeader,
   },
 }
 </script>
@@ -87,11 +90,6 @@ export default {
 }
 .wrapper {
   @include flex();
-
-  h2 {
-    align-self: center;
-    margin-top: 1rem;
-  }
 
   .content {
     padding: 0rem 2rem;
