@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <h2>eezer app</h2>
+    <h3>eezer app</h3>
     <button class="exit">
       <img src="@/assets/exit.svg" alt="" />
     </button>
@@ -21,22 +21,18 @@ nav {
   align-items: center;
   padding: 2rem 1.5rem;
 
-  h2 {
+  h3 {
     color: #2f2f2f;
+    text-transform: uppercase;
   }
 
   button {
     background: #ec2329;
-    opacity: 0.6;
     padding: 1rem;
     border: none;
     border-radius: 5rem;
     transition: all 0.4s ease;
     cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-    }
   }
 }
 </style>
