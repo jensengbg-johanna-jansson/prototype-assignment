@@ -58,7 +58,9 @@
             </section>
         </section>
         <section class="video">
-            <img src="../../assets/heatstroke-video.png">
+            <video width="320" height="240" controls autoplay>
+                <source src="https://youtu.be/jvGC_dQJUtE" type="">
+            </video>
         </section>
     </section>
 </template>
@@ -96,7 +98,7 @@ export default {
     h1 {
         grid-column: 2 / 3;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         font-weight: 700;
         font-size: 2rem;
@@ -177,13 +179,14 @@ export default {
 
     p {
         display: flex;
-        justify-content: center;
-        padding: 0.5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
-    .video img {
+    .video video {
         display: block;
         margin: auto;
+        margin-bottom: 6rem;
     }
 
     @media only screen and (min-width: 768px) {

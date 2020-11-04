@@ -57,7 +57,7 @@
             <h4>Burns</h4>
         </div>
         <div class="symptoms">
-            <h4>Insect Bites & Stings</h4>
+            <h4>Insect Bites</h4>
         </div>
         <span></span>
         <div class="symptoms">
@@ -104,8 +104,11 @@ export default {
         width: 8rem;
         height: 4rem;
         margin: auto;
-        @include subHeading();
         cursor: pointer;
+
+        h4 {
+            font-size: 14px;
+        }
     }
 
     span {
