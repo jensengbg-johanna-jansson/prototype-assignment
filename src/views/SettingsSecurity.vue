@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <SettingsNav />
-    <h2>security</h2>
+    <SettingsHeader title="security" />
     <button @click="showActivityFunc">login activity</button>
 
     <section class="log" v-if="showActivity">
@@ -41,10 +41,13 @@
 </template>
 
 <script>
-import SettingsNav from "@/components/SettingsNav.vue"
+import SettingsNav from "@/components/settingsComp/SettingsNav.vue"
+import SettingsHeader from "@/components/settingsComp/SettingsHeader.vue"
+
 export default {
   components: {
     SettingsNav,
+    SettingsHeader,
   },
   data: () => {
     return {
