@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 import Home from "../views/Home.vue"
 import PatientStatus from "../views/PatientStatus.vue"
+import Pickup from "../views/Pickup.vue"
+import Dropoff from "../views/Dropoff.vue"
 import Settings from "../views/Settings.vue"
 import SettingsAbout from "../views/SettingsAbout.vue"
 import SettingsSupport from "../views/SettingsSupport.vue"
@@ -43,17 +45,17 @@ const routes = [
   },
   {
     path: "/settings-about",
-    name: "Settings",
+    name: "Settings About",
     component: SettingsAbout,
   },
   {
     path: "/settings-support",
-    name: "Settings",
+    name: "Settings Support",
     component: SettingsSupport,
   },
   {
     path: "/settings-security",
-    name: "Settings",
+    name: "Settings Security",
     component: SettingsSecurity,
   },
 ]
