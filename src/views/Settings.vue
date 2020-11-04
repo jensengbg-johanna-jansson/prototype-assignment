@@ -17,7 +17,7 @@
         <button class="btn" @click="navToSecurity">security</button>
       </li>
       <li>
-        <button class="btn">support</button>
+        <button class="btn" @click="navToSupport">support</button>
       </li>
       <li>
         <button class="btn" @click="navToAbout">about</button>
@@ -49,7 +49,7 @@
 </template>
 
 <script>
-import SettingsNav from "@/components/SettingsNav.vue"
+import SettingsNav from "@/components/settingsComp/SettingsNav.vue"
 export default {
   components: {
     SettingsNav,
@@ -60,6 +60,9 @@ export default {
     },
     navToSecurity: function() {
       this.$router.push("/settings-security")
+    },
+    navToSupport: function() {
+      this.$router.push("/settings-support")
     },
   },
 }
