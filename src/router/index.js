@@ -9,6 +9,7 @@ import Pickup from '../views/Pickup.vue'
 import Dropoff from '../views/Dropoff.vue'
 import FirstAid from '../views/FirstAid.vue'
 import Heatstroke from '../views/Heatstroke.vue'
+import Settings from '../views/Settings.vue'
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
     path: "/heatstroke",
     name: "Heatstroke",
     component: Heatstroke
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    component: Settings
   }
 ]
 
