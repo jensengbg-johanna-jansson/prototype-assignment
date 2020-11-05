@@ -76,7 +76,7 @@ export default {
   }
   input:focus {
     outline: none;
-    color: $black;
+    color: $txtcolor;
     font-size: 16px;
   }
 
