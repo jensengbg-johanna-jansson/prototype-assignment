@@ -42,7 +42,7 @@ export default {
       this.$router.push("/pickup");
     },
     closeNotice() {
-      this.$emit("closeNotice");
+      this.$emit("close-notice");
     },
   },
 };
