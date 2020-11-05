@@ -26,6 +26,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: 2rem;
 
         h1 {
             display: none;
