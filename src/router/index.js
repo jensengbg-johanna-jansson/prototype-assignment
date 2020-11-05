@@ -7,6 +7,8 @@ import TravelHistoryExpanded from '../views/TravelHistoryExpanded.vue'
 import PatientStatus from '../views/PatientStatus.vue'
 import Pickup from '../views/Pickup.vue'
 import Dropoff from '../views/Dropoff.vue'
+import FirstAid from '../views/FirstAid.vue'
+import Heatstroke from '../views/Heatstroke.vue'
 
 const routes = [
   {
@@ -48,6 +50,16 @@ const routes = [
     path: "/patient-status",
     name: "PatientStatus",
     component: PatientStatus
+  },
+  {
+    path: "/firstaid",
+    name: "FirstAid",
+    component: FirstAid
+  },
+  {
+    path: "/heatstroke",
+    name: "Heatstroke",
+    component: Heatstroke
   }
 ]
 

@@ -1,5 +1,6 @@
 <template>
     <section class="aside-left">
+        <img class="logo" src="../assets/logo.png">
         <h1>Travel History</h1>
         <section class="history-small">
             <section @click="goToExpandedHistory()" class="info selected">
