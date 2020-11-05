@@ -74,7 +74,7 @@
             <h4>Stroke</h4>
         </div>
         <span></span>
-        <div class="symptoms">
+        <div class="symptoms sprains">
             <h4>Sprains</h4>
         </div>
     </section>
@@ -93,7 +93,7 @@ export default {
 <style lang="scss" scoped>
     #container {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: row;
         flex-wrap: wrap;
         margin: 2rem;
     }
@@ -104,6 +104,8 @@ export default {
         width: 8rem;
         height: 4rem;
         margin: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         cursor: pointer;
 
         h4 {

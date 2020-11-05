@@ -58,9 +58,9 @@
             </section>
         </section>
         <section class="video">
-            <video width="320" height="240" controls autoplay>
-                <source src="https://youtu.be/jvGC_dQJUtE" type="">
-            </video>
+            <a href="https://youtu.be/jvGC_dQJUtE">
+                <img src="../../assets/heatstroke-video.png" width="300" height="300">
+            </a>
         </section>
     </section>
 </template>
@@ -183,10 +183,10 @@ export default {
         align-items: flex-start;
     }
 
-    .video video {
+    .video img {
         display: block;
         margin: auto;
-        margin-bottom: 6rem;
+        margin-bottom: 2rem;
     }
 
     @media only screen and (min-width: 768px) {
@@ -252,8 +252,7 @@ export default {
 
         .video img {
             display: block;
-            margin: auto;
-            width: 40rem;
+            margin: bottom;
         }
     }
 </style>
