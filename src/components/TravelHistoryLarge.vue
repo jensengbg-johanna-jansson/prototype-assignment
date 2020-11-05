@@ -2,7 +2,7 @@
     <section class="aside-right">
         <section class="history-large">
             <section class="header">
-                <img @click="goBack" class="back" src="../assets/back-button.png" alt="Back Button">
+                <img @click="goBack()" class="back" src="../assets/back-button.png" alt="Back Button">
                 <h1>Travel History</h1>
             </section>
             <section class="patient-id">
