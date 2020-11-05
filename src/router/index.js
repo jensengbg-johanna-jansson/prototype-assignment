@@ -10,6 +10,9 @@ import Dropoff from '../views/Dropoff.vue'
 import FirstAid from '../views/FirstAid.vue'
 import Heatstroke from '../views/Heatstroke.vue'
 
+import LoginActivityDesktop from '../components/LoginActivityDesktop.vue'
+
+
 const routes = [
   {
     path: '/',
@@ -60,6 +63,11 @@ const routes = [
     path: "/heatstroke",
     name: "Heatstroke",
     component: Heatstroke
+  },
+  {
+    path: "/loginactivity",
+    name: "LoginActivityDesktop",
+    component: LoginActivityDesktop
   }
 ]
 
