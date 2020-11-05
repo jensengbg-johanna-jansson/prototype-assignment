@@ -1,12 +1,13 @@
 <template>
-    <button class="primary-button">{{ text }}</button>
+    <button class="primary-button" :class="{ greenButton: color=='green' }">{{ text }}</button>
 </template>
 
 <script>
 export default {
     namne: 'primaryButton',
     props: {
-        text: String
+        text: String,
+        color: String
     }
 }
 </script>
@@ -21,13 +22,17 @@ export default {
         outline: none;
     }
     .primary-button:active {
-        background: $primaryDark;
+        filter: brightness(75%);
         box-shadow: none;
+    }
+
+    .greenButton {
+        background: $secondary;
     }
 
     @media only screen and (min-width: 768px) {
         .primary-button:hover {
-            background: $primaryDark;
+            filter: brightness(75%);
         }
     }
 
