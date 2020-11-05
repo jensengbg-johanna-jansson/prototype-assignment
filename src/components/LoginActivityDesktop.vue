@@ -1,40 +1,42 @@
 <template>
-  <SettingTitle msg="Login Activity" />
-  <section id="loginActivity">
-    <section id="activeNow">
-      <div class="active">
-        <h2 class="name">Konza, Kenya</h2>
-        <span class="active-now">Active now</span>
-        <p>Ulefone note 8p</p>
-      </div>
-    </section>
-    <section id="activeHistory">
-      <div class="inactive">
-        <h2 class="name">Konza, Kenya</h2>
-        <span class="active-time">22 july 2020</span>
-        <p>Ulefone note 8p</p>
-      </div>
-      <div class="inactive">
-        <h2 class="name">Konza, Kenya</h2>
-        <span class="active-time">22 july 2020</span>
-        <p>Ulefone note 8p</p>
-      </div>
-      <div class="inactive">
-        <h2 class="name">Konza, Kenya</h2>
-        <span class="active-time">22 july 2020</span>
-        <p>Ulefone note 8p</p>
-      </div>
-      <div class="inactive">
-        <h2 class="name">Konza, Kenya</h2>
-        <span class="active-time">22 july 2020</span>
-        <p>Ulefone note 8p</p>
-      </div>
+  <section id="loginActivityDesktop">
+    <SettingTitle msg="Login Activity" />
+    <section id="loginActivity">
+      <section id="activeNow">
+        <div class="active">
+          <h2 class="name">Konza, Kenya</h2>
+          <span class="active-now">Active now</span>
+          <p>Ulefone note 8p</p>
+        </div>
+      </section>
+      <section id="activeHistory">
+        <div class="inactive">
+          <h2 class="name">Konza, Kenya</h2>
+          <span class="active-time">22 july 2020</span>
+          <p>Ulefone note 8p</p>
+        </div>
+        <div class="inactive">
+          <h2 class="name">Konza, Kenya</h2>
+          <span class="active-time">22 july 2020</span>
+          <p>Ulefone note 8p</p>
+        </div>
+        <div class="inactive">
+          <h2 class="name">Konza, Kenya</h2>
+          <span class="active-time">22 july 2020</span>
+          <p>Ulefone note 8p</p>
+        </div>
+        <div class="inactive">
+          <h2 class="name">Konza, Kenya</h2>
+          <span class="active-time">22 july 2020</span>
+          <p>Ulefone note 8p</p>
+        </div>
+      </section>
     </section>
   </section>
 </template>
 
 <script>
-import SettingTitle from "./SettingTitle.vue"
+import SettingTitle from "./SettingTitle.vue";
 export default {
   name: "LoginActivityDesktop",
   components: { SettingTitle },
