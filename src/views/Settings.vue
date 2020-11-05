@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import toggleSwitch from '../components/globalComp/toggleSwitch'
+import toggleSwitch from '../components/globalComp/toggleSwitch';
 export default {
     name: 'Settings',
     components: {
-        toggleSwitch
+        toggleSwitch,
     }
 }
 </script>
