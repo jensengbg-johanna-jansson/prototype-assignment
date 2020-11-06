@@ -3,7 +3,7 @@
     <SettingsNav />
     <h2>Settings</h2>
     <ul>
-      <li>
+      <li class="selectDiv">
         <select name="languages" id="">
           <option value="english">english</option>
           <option value="Swahili">Swahili</option>
@@ -96,6 +96,7 @@ export default {
 
       .btn,
       select {
+        position: relative;
         background: #efefef;
         padding: 1rem 0.5rem;
         width: 100%;
@@ -114,11 +115,25 @@ export default {
       }
 
       select {
+        padding: 1rem 1.5rem;
         appearance: none;
       }
+    }
 
-      select {
-        padding: 1rem 1.5rem;
+    .selectDiv {
+      position: relative;
+
+      &::before {
+        content: ">";
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        font: 17px "Consolas", monospace;
+        color: #333;
+        top: 40%;
+        right: 1rem;
+        transform: rotate(90deg);
+        z-index: 10;
       }
     }
 
