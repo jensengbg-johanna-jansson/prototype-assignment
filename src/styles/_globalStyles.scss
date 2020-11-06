@@ -20,6 +20,7 @@ $placeholdersize: 16px;
 $borderradius: 60px;
 $buttontextsize: 20px;
 $buttontextcolor: #FFFFFF;
+$buttonShadow: 0 4px 4px rgba(0, 0, 0, .25);
 
 @mixin centeredFlex {
     display: flex;
@@ -35,7 +36,7 @@ $buttontextcolor: #FFFFFF;
     font-size: 1.25rem;
     font-weight: 900;
     font-family: $font;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    box-shadow: $buttonShadow;
     text-transform: uppercase;
     border: none;
 }

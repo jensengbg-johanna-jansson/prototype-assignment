@@ -1,10 +1,11 @@
 <template>
+<transition name="patientSlideInOut">
   <div class="wrapper">
       <nav>
-        <div>
+        <button class="first-aid-button">
           <img src="../assets/AID.svg" alt="">
-          <p>first aid</p>
-        </div>
+          first aid
+        </button>
       </nav>
       <section class="content">
         <h1>Pick up</h1>
@@ -17,6 +18,7 @@
       </section>
       <primaryButton :text="'send'" />
   </div>
+</transition>
 </template>
 
 <script>
@@ -54,82 +56,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$main-color: rgb(200, 54, 41);
-$shadow: 0px 6px 10px #0004;
-
-@mixin flex() {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
   .wrapper {
     height: 100vh;
-    @include flex();
+   display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
 
-     nav {
-       width: 90vw;
-      margin: 1.5rem;
-      @include flex();
+    nav {
+      width: 90vw;
+      display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
 
-
-      div {
-        background: $main-color;
-        padding: 1rem 0rem;
-        @include flex();
+      .first-aid-button {
+        background: $primary;
+        @include centeredFlex();
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
         width: 4.8rem;
         height: 4.8rem;
         border-radius: 50%;
         color: #ffffff;
-        font-weight: bold;
+        font-weight: 900;
         text-transform: uppercase;
         font-size: .6rem;
-        box-shadow: $shadow;
+        box-shadow: $buttonShadow;
+        border: none;
+
+        img {
+          margin-bottom: .4rem;
+        }
       }
     }
 
     .content {
       width: 100%;
-      @include flex();
+      display: flex;
       flex-direction: column;
-      padding: 1rem 1.5rem;
+      align-items: center;
 
-    h1 {
-      align-self: center;
-      @include headingLarge();
-    }
+      h1 {
+        align-self: center;
+        @include headingLarge();
+      }
 
-    .info {
-      margin: 4rem 0rem 1rem 0rem;
-      color: #888;
-      font-size: 1.1rem;
-    }
+      .info {
+        color: #888;
+        font-size: 1.1rem;
+      }
 
-    ul {
-      width: 100%;
-      list-style: none;
-    }
-
-    }
-
-    .cta {
-      background: $main-color;
-      color: #f6f6f6;
-      padding: 1rem 5rem;
-      margin: 1rem 0rem;
-      border: none;
-      border-radius: 5rem;
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      box-shadow: $shadow;
+      ul {
+        width: 100%;
+        list-style: none;
+      }
     }
   }
 </style>
