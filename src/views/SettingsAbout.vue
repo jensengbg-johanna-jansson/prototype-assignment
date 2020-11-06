@@ -4,8 +4,8 @@
     <SettingsHeader title="about" />
     <section class="content">
       <article>
-        <button>data policy</button>
-        <p>
+        <button @click="showPolicy">data policy</button>
+        <p v-if="policyShown">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu
           mauris vehicula, finibus arcu eget, dapibus ante. Vivamus euismod
           euismod elit quis cursus. Aenean porta neque sed imperdiet mollis.
@@ -20,7 +20,7 @@
           Maecenas volutpat laoreet orci. Donec tempus purus sed erat porta
           finibus.
         </p>
-        <p>
+        <p v-if="policyShown">
           Pellentesque pretium efficitur gravida. Fusce vestibulum eu dui eu
           posuere. Cras vitae sapien tristique, sagittis odio ut, cursus tellus.
           Fusce consectetur vestibulum dui ut ultricies. Praesent fringilla odio
@@ -35,8 +35,8 @@
         </p>
       </article>
       <article>
-        <button>terms of use</button>
-        <p>
+        <button @click="showTerms">terms of use</button>
+        <p v-if="termsShown">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu
           mauris vehicula, finibus arcu eget, dapibus ante. Vivamus euismod
           euismod elit quis cursus. Aenean porta neque sed imperdiet mollis.
@@ -49,7 +49,7 @@
           pharetra nibh volutpat. Sed non ipsum malesuada nunc aliquam blandit
           quis eu mauris.
         </p>
-        <p>
+        <p v-if="termsShown">
           Vestibulum aliquet scelerisque eros eu commodo. Maecenas volutpat
           laoreet orci. Donec tempus purus sed erat porta finibus. Pellentesque
           pretium efficitur gravida. Fusce vestibulum eu dui eu posuere. Cras
@@ -78,6 +78,21 @@ export default {
     SettingsNav,
     SettingsHeader,
   },
+  data: () => {
+    return {
+      policyShown: false,
+      termsShown: false,
+    }
+  },
+  methods: {
+    showPolicy: function() {
+      console.log("Showing...")
+      this.policyShown = !this.policyShown
+    },
+    showTerms: function() {
+      this.termsShown = !this.termsShown
+    },
+  },
 }
 </script>
 
@@ -93,23 +108,29 @@ export default {
 
   .content {
     padding: 0rem 2rem;
+    width: 100%;
 
     article {
       margin: 2rem 0rem;
       padding: 0.5rem 0rem;
 
       button {
-        background: #ec2329;
+        background: #efefef;
         padding: 1rem 0.5rem;
         margin: 1rem 0rem;
         width: 100%;
         border-radius: 6rem;
         border: none;
         text-transform: uppercase;
-        color: #f2f2f2;
+        color: #222;
         font-weight: bold;
         transition: all 0.4s ease;
         cursor: pointer;
+
+        &:hover {
+          background: #ec2329;
+          color: #f2f2f2;
+        }
       }
 
       p {
