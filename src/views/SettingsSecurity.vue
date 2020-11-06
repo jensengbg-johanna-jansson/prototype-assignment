@@ -20,14 +20,26 @@
 
     <section class="log" v-if="showColleagues">
       <h3>konza, kenya</h3>
-      <p class="status">2 km</p>
-      <p><img src="../assets/phone-call.svg" alt="" /> 00 254 11 54755654</p>
+      <p class="status">2 km away</p>
+
+      <section class="callCont">
+        <p>00 254 11 54755654</p>
+        <button class="callBtn">
+          <img src="../assets/images/call.svg" alt="" />
+        </button>
+      </section>
     </section>
 
     <section class="log" v-if="showColleagues">
       <h3>konza, kenya</h3>
-      <p class="status">12 km</p>
-      <p><img src="../assets/phone-call.svg" alt="" /> 00 254 11 22334455</p>
+      <p class="status">12 km away</p>
+
+      <section class="callCont">
+        <p>00 254 11 22334455</p>
+        <button class="callBtn">
+          <img src="../assets/images/call.svg" alt="" />
+        </button>
+      </section>
     </section>
 
     <button @click="showPasswordFunc">Change password</button>
@@ -88,7 +100,7 @@ export default {
 
   .log {
     width: 80%;
-    min-height: 9rem;
+    min-height: 12rem;
     @include flex();
     justify-content: space-around;
     border: 1px solid #1fab55;
@@ -112,6 +124,25 @@ export default {
     img {
       width: 14px;
       margin: 0rem 0.5rem;
+    }
+
+    .callCont {
+      width: 100%;
+      @include flex();
+      flex-direction: row;
+      justify-content: space-around;
+
+      .callBtn {
+        @include flex();
+        justify-content: center;
+        background: #1fab55;
+        padding: 0.5rem 0.1rem;
+        width: initial;
+
+        img {
+          transform: scale(0.9);
+        }
+      }
     }
   }
 
