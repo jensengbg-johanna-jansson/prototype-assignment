@@ -7,6 +7,7 @@ import Settings from "../views/Settings.vue"
 import SettingsAbout from "../views/SettingsAbout.vue"
 import SettingsSupport from "../views/SettingsSupport.vue"
 import SettingsSecurity from "../views/SettingsSecurity.vue"
+import Phonecall from "@/views/Phonecall.vue"
 
 const routes = [
   {
@@ -57,6 +58,11 @@ const routes = [
     path: "/settings-security",
     name: "Settings Security",
     component: SettingsSecurity,
+  },
+  {
+    path: "/phonecall",
+    name: "Phonecall",
+    component: Phonecall,
   },
 ]
 
