@@ -20,7 +20,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    hangupFunc: function() {
+      this.$router.push("/settings-support")
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
