@@ -1,8 +1,8 @@
 <template>
-<transition name="patientSlideInOut">
+<transition name="fade"> 
   <div class="wrapper">
       <nav>
-        <button class="first-aid-button">
+        <button class="first-aid-button" @click="goToFirstAid">
           <img src="../assets/AID.svg" alt="">
           first aid
         </button>
@@ -16,7 +16,7 @@
           </li>
         </ul>
       </section>
-      <primaryButton :text="'send'" />
+      <primaryButton :text="'send'" @click="goToDropOff" />
   </div>
 </transition>
 </template>
@@ -44,13 +44,23 @@ export default {
           lable: "Severe pain",
           description: "Patient has severe pain in"
         }
-      ]
+      ],
+      showComponent: false
     }
   },
   methods: {
     goToDropOff() {
       this.$router.push({ path: 'dropoff' });
+    },
+    goToFirstAid() {
+      this.$router.push({ path: 'firstaid' });
+    },
+    showPage() {
+      this.showComponent = true;
     }
+  },
+  mounted() {
+    this.showPage();
   }
 }
 </script>
@@ -112,5 +122,17 @@ export default {
         list-style: none;
       }
     }
+  }
+
+  // Page transition
+  .fade-enter-active {
+    transition: all .3s ease;
+  }
+  .fade-leave-active {
+    transition: all .8s ease;
+  }
+  .fade-enter, .fade-leave-to {
+    transform: translateX(10px);
+    opacity: 0;
   }
 </style>
