@@ -169,7 +169,6 @@ export default {
   },
   methods: {
     showPolicy: function() {
-      console.log("Showing...")
       this.policyShown = !this.policyShown
     },
     showTerms: function() {
