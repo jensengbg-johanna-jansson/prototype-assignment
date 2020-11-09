@@ -79,32 +79,73 @@
       <article>
         <button @click="showTerms">terms of use</button>
         <p v-if="termsShown">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu
-          mauris vehicula, finibus arcu eget, dapibus ante. Vivamus euismod
-          euismod elit quis cursus. Aenean porta neque sed imperdiet mollis.
-          Maecenas convallis leo justo, nec sollicitudin eros tincidunt a.
-          Suspendisse vel justo vitae sem gravida aliquam. Etiam tempus tellus
-          in enim condimentum, nec consequat turpis pulvinar. Cras consectetur
-          in nisi sed vestibulum. Duis elementum ultricies tellus quis euismod.
-          Curabitur vel dapibus risus, quis porttitor augue. Curabitur mattis
-          nec elit et eleifend. Fusce placerat nunc nec purus dapibus, et
-          pharetra nibh volutpat. Sed non ipsum malesuada nunc aliquam blandit
-          quis eu mauris.
+          Last updated: (add date) Please read these Terms and Conditions
+          ("Terms", "Terms and Conditions") carefully before using the
+          http://www.eezer.com (change this) website and the My Mobile App
+          (change this) mobile application (the "Service") operated by My
+          Company (change this) ("us", "we", or "our"). Your access to and use
+          of the Service is conditioned on your acceptance of and compliance
+          with these Terms. These Terms apply to all visitors, users and others
+          who access or use the Service.
+        </p>
+
+        <p v-if="termsShown">
+          <b>
+            By accessing or using the Service you agree to be bound by these
+            Terms. If you disagree with any part of the terms then you may not
+            access the Service.
+          </b>
         </p>
         <p v-if="termsShown">
-          Vestibulum aliquet scelerisque eros eu commodo. Maecenas volutpat
-          laoreet orci. Donec tempus purus sed erat porta finibus. Pellentesque
-          pretium efficitur gravida. Fusce vestibulum eu dui eu posuere. Cras
-          vitae sapien tristique, sagittis odio ut, cursus tellus. Fusce
-          consectetur vestibulum dui ut ultricies. Praesent fringilla odio
-          felis, mollis cursus purus pretium a. In feugiat sem nec purus
-          vulputate vulputate. Quisque dictum massa quam. Vestibulum ut lorem
-          eget augue elementum posuere at et metus. Donec nec turpis in ex
-          tempor laoreet. Suspendisse quis magna eleifend, pretium risus vitae,
-          tristique nisl. Vestibulum ante ipsum primis in faucibus orci luctus
-          et ultrices posuere cubilia curae; Maecenas commodo quam sit amet
-          consectetur consectetur. Sed tincidunt fringilla bibendum. Etiam nec
-          porta libero.
+          <b>Purchases </b> <br />
+          If you wish to purchase any product or service made available through
+          the Service ("Purchase"), you may be asked to supply certain
+          information relevant to your Purchase including, without limitation,
+          your … The Purchases section is for businesses that sell online
+          (physical or digital). For the full disclosure section, create your
+          own Terms and Conditions. <br />
+          <b>Subscriptions </b> <br />
+          Some parts of the Service are billed on a subscription basis
+          ("Subscription(s)"). You will be billed in advance on a recurring ...
+          The Subscriptions section is for SaaS businesses. For the full
+          disclosure section, create your own Terms and Conditions.
+        </p>
+        <br />
+        <p v-if="termsShown">
+          <b>Content </b> <br />
+          Our Service allows you to post, link, store, share and otherwise make
+          available certain information, text, graphics, videos, or other
+          material ("Content"). You are responsible for the … The Content
+          section is for businesses that allow users to create, edit, share,
+          make content on their websites or apps. For the full disclosure
+          section, create your own Terms and Conditions.
+        </p>
+        <p v-if="termsShown">
+          <b>Links To Other Web Sites </b> <br />
+          Our Service may contain links to third-party web sites or services
+          that are not owned or controlled by My Company (change this). My
+          Company (change this) has no control over, and assumes no
+          responsibility for, the content, privacy policies, or practices of any
+          third party web sites or services. You further acknowledge and agree
+          that My Company (change this) shall not be responsible or liable,
+          directly or indirectly, for any damage or loss caused or alleged to be
+          caused by or in connection with use of or reliance on any such
+          content, goods or services available on or through any such web sites
+          or services.
+        </p>
+
+        <p v-if="termsShown">
+          <b>Changes </b> <br />
+          We reserve the right, at our sole discretion, to modify or replace
+          these Terms at any time. If a revision is material we will try to
+          provide at least 30 (change this) days' notice prior to any new terms
+          taking effect. What constitutes a material change will be determined
+          at our sole discretion.
+        </p>
+
+        <p v-if="termsShown">
+          <b>Contact Us </b> <br />
+          If you have any questions about these Terms, please contact us.
         </p>
       </article>
     </section>
