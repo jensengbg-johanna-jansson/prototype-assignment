@@ -1,7 +1,7 @@
 <template>
   <nav>
     <h3>eezer app</h3>
-    <button class="exit">
+    <button class="exit" @click="toStartPage">
       <img src="@/assets/exit.svg" alt="" />
     </button>
   </nav>
@@ -10,6 +10,11 @@
 <script>
 export default {
   name: "Settings navbar",
+  methods: {
+    toStartPage: function() {
+      this.$router.push("/")
+    },
+  },
 }
 </script>
 
