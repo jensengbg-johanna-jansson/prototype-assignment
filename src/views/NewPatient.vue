@@ -54,6 +54,7 @@ export default {
   width: 100vw;
   @include centeredFlex();
   flex-direction: column;
+  color: $black;
 
   #cart {
     width: 21rem;

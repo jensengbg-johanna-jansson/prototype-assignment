@@ -8,10 +8,9 @@
           class="pop-overlay"
         />
       </transition>
-      <Logo />
-      <UserLinks />
-      <Items />
-      <Footer />
+      <startPageHeader />
+      <startPageTitle />
+      <startPageItems />
     </section>
     <section v-else>
       <MobileStartPage />
@@ -20,12 +19,11 @@
 </template>
 
 <script>
-import Logo from "@/components/startComp/Logo.vue";
-import UserLinks from "@/components/startComp/UserLinks.vue";
-import Items from "@/components/startComp/Items.vue";
+import startPageHeader from "@/components/startComp/startPageHeader.vue";
+import startPageTitle from "@/components/startComp/startPageTitle.vue";
+import startPageItems from "@/components/startComp/startPageItems.vue";
 import MobileStartPage from "./MobileStartPage.vue";
 import NewPatient from "@/views/NewPatient.vue";
-import Footer from "@/components/startComp/Footer.vue";
 
 export default {
   name: "StartPage",
@@ -36,10 +34,9 @@ export default {
   },
   components: {
     NewPatient,
-    Logo,
-    UserLinks,
-    Items,
-    Footer,
+    startPageHeader,
+    startPageTitle,
+    startPageItems,
     MobileStartPage,
   },
   methods: {
@@ -65,6 +62,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#startPage {
+  width: 100vw;
+  height: 100vh;
+  color: $white;
+  background-image: linear-gradient(
+      rgb(121 112 112 / 23%),
+      rgb(126 116 116 / 44%)
+    ),
+    url("../assets/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+}
 .pop-overlay {
   height: 100vh;
   position: absolute;
@@ -77,6 +88,6 @@ export default {
 }
 .fade-enter,
 .fade-leave-to {
-  opacity: 0,5;
+  opacity: 0, 5;
 }
 </style>
