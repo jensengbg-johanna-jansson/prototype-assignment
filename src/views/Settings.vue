@@ -134,6 +134,7 @@ export default {
         right: 1rem;
         transform: rotate(90deg);
         z-index: 10;
+        pointer-events:none;
       }
     }
 
