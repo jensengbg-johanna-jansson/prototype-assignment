@@ -1,5 +1,4 @@
 <template>
-<transition name="fade"> 
   <div class="wrapper">
       <nav>
         <button class="first-aid-button" @click="goToFirstAid">
@@ -18,7 +17,6 @@
       </section>
       <primaryButton :text="'send'" @click="goToDropOff" />
   </div>
-</transition>
 </template>
 
 <script>
@@ -44,8 +42,7 @@ export default {
           lable: "Severe pain",
           description: "Patient has severe pain in"
         }
-      ],
-      showComponent: false
+      ]
     }
   },
   methods: {
@@ -54,13 +51,7 @@ export default {
     },
     goToFirstAid() {
       this.$router.push({ path: 'firstaid' });
-    },
-    showPage() {
-      this.showComponent = true;
     }
-  },
-  mounted() {
-    this.showPage();
   }
 }
 </script>
@@ -68,14 +59,15 @@ export default {
 <style lang="scss" scoped>
   .wrapper {
     height: 100vh;
-   display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 1.5rem;
+    background: #ffffff;
 
     nav {
-      width: 90vw;
+      width: 100%;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -122,17 +114,5 @@ export default {
         list-style: none;
       }
     }
-  }
-
-  // Page transition
-  .fade-enter-active {
-    transition: all .3s ease;
-  }
-  .fade-leave-active {
-    transition: all .8s ease;
-  }
-  .fade-enter, .fade-leave-to {
-    transform: translateX(10px);
-    opacity: 0;
   }
 </style>
