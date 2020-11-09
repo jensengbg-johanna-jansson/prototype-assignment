@@ -49,13 +49,21 @@
             </section>
             <section class="travel-report">
                 <h2>Travel Report</h2>
+                <directionsMap 
+                class="travel-report-map"
+                :hideAmbulance="true" 
+                :showHospital="true" />
             </section>
         </section>
     </section>
 </template>
 
 <script>
+import directionsMap from '../components/mapComp/map';
 export default {
+    components: {
+        directionsMap
+    },
     methods: {
         goBack() {
             this.$router.push({ name: 'TravelHistory' });
@@ -171,6 +179,10 @@ export default {
         font-size: 12px;
     }
 
+    .travel-report-map {
+        position: relative;
+    }
+
     @media only screen and (min-width: 768px) {
         .header {
             display: none;
@@ -199,6 +211,10 @@ export default {
 
         .travel-report {
             grid-column: 1 / 3;
+        }
+
+        .travel-report-map {
+            width: 100%;
         }
     }
 </style>

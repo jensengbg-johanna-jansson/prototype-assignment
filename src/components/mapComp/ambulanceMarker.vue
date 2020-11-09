@@ -1,7 +1,7 @@
 <template>
     <div class="ambulance" :class="{ reverseAnimation: isDropoff }">
         <div class="ambualnce-wrapper">
-            <i class="fas fa-ambulance ambulance-marker" ></i>
+            <i class="fas fa-motorcycle ambulance-marker" ></i>
             <span class="pulse"></span>
         </div>
     </div>
@@ -28,13 +28,13 @@ export default {
             position: relative;
         }
         &-marker {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             color: $primary;             
         }
         .pulse {
             position: absolute;
-            top: -.5rem;
-            left: -.25rem;
+            top: -.4rem;
+            left: -.1rem;
             z-index: -1;
             display: block;
             width: 2rem;

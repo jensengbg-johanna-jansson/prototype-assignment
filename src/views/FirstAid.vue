@@ -1,6 +1,6 @@
 <template>
     <section>
-        <Header class="header"/>
+        <Header class="header" :goBack="true"/>
         <Title />
         <SearchBar class="search-bar" />
         <Symptoms />

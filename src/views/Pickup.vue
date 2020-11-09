@@ -1,12 +1,15 @@
 <template>
     <section class="pickup">
+        <transition name="slide"> 
+            <PatientStatus v-if="showPatientStatus" class="pickup-patient-status" />
+        </transition>
         <div class="pickup-sidebar">
             <h1 class="heading">Pick up patient</h1>
             <directionsBox :isDropoff="false" class="pickup-mobile" />
             <directionsBoxDesktop :isDropoff="false" class="pickup-desktop" />
             <primaryButton @click="goToCheckSymptoms()" class="pickup-sidebar-button" :text="'pick up'" />
         </div>
-        <directionsMap :showHospital="false" class="pickup-map" />
+        <directionsMap :showHospital="false" class="pickup-map" :class="{ overlay: showPatientStatus}" />
     </section>
 </template>
 
@@ -15,19 +18,47 @@ import directionsMap from '../components/mapComp/map';
 import directionsBox from '../components/mapComp/directionsBox';
 import directionsBoxDesktop from '../components/mapComp/directionsBoxDesktop';
 import primaryButton from '../components/globalComp/primaryButton';
+import PatientStatus from '../views/PatientStatus';
 export default {
     name: 'Pickup',
     components: {
         directionsMap,
         directionsBox,
         directionsBoxDesktop,
-        primaryButton
+        primaryButton,
+        PatientStatus
+    },
+    data() {
+        return {
+            isMobile: true,
+            showPatientStatus: false
+        }
     },
     methods: {
         goToCheckSymptoms() {
-            this.$router.push({ path: 'patient-status' });
+            if(this.isMobile == true) {
+                this.$router.push({ path: 'patient-status' });
+            } else {
+                this.showPatientStatus = true;
+            }            
+        },
+        windowResize() {
+            let windowWidth = window.innerWidth;
+
+            if(windowWidth < 768) {
+                this.isMobile = true;
+            } else {
+                this.isMobile = false;
+            }
         }
-    }
+    },
+    created() {
+        window.addEventListener('resize', this.windowResize);
+        this.windowResize();
+    },
+    unmounted() {
+        window.removeEventListener('resize', this.windowResize);
+    },
 }
 </script>
 
@@ -69,6 +100,16 @@ export default {
             display: flex;
             justify-content: space-between;
 
+            &-patient-status {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 45vw;
+                height: 100vh;
+                overflow: scroll;
+                z-index: 99;
+                box-shadow: 1px 0 3px rgba(0, 0, 0, .25);
+            }
             &-sidebar {
                 width: 30vw;
                 background: #ffffff;
@@ -87,7 +128,20 @@ export default {
             }
             &-map {
                 position: initial;
+                transition: all .3s ease;
+            }
+            .overlay {
+                opacity: .2;
             }
         }
+        // Page transition
+        .slide-enter-active, .slide-leave-active {
+            //transform: translateX(-100px);
+            transition: all .5s ease;
+        }
+        .slide-enter-from, .slide-leave-to {
+            transform: translateX(-45vw);
+        }
+
     }
 </style>
