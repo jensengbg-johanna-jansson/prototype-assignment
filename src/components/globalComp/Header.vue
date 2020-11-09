@@ -2,16 +2,23 @@
     <section id="container">
         <section class="header">
             <h1>Eezer App</h1>
-            <img @click="goToStartPage()" src="../../assets/close-button.png">
+            <img @click="goToPage()" src="../../assets/close-button.png">
         </section>
     </section>
 </template>
 
 <script>
 export default {
+    props: {
+        goBack: Boolean
+    },
     methods: {
-        goToStartPage() {
-            this.$router.push({ path: '/' });
+        goToPage() {
+            if(this.goBack == true) {
+                this.$router.go(-1);
+            } else {
+                this.$router.push({ path: '/' });
+            }
         }
     }
 }

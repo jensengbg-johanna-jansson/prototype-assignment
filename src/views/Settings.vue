@@ -1,5 +1,6 @@
 <template>
-    <section id="container">
+    <section class="settings-desktop">
+        <img class="exit-button" @click="goToStartPage()" src="../assets/close-button.png">
         <SettingsMenuDesktop class="settings-menu" />
         <ChangeLanguageDesktop class="change-language" />
     </section>
@@ -13,14 +14,30 @@ export default {
     components: {
         SettingsMenuDesktop,
         ChangeLanguageDesktop
+    },
+    methods: {
+        goToStartPage() {
+            this.$router.push({ path: '/' });
+        }
     }
 }
 </script>
 
 <style scoped>
-    #container {
+    .settings-desktop {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 20rem 1fr;
+        justify-items: center;
+    }
+
+    .exit-button {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+    .exit-button:hover {
+        cursor: pointer;
     }
 
     .settings-menu {
