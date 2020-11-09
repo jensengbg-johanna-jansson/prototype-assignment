@@ -2,18 +2,13 @@
     <section id="container">
         <section class="header">
             <h1>Eezer App</h1>
-            <img @click="goToStartPage()" src="../../assets/close-button.png">
+            <img @click="$router.go(-1)" src="../../assets/close-button.png">
         </section>
     </section>
 </template>
 
 <script>
 export default {
-    methods: {
-        goToStartPage() {
-            this.$router.push({ path: '/' });
-        }
-    }
 }
 </script>
 
