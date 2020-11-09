@@ -33,8 +33,8 @@ export default {
         }
         .pulse {
             position: absolute;
-            top: -.5rem;
-            left: -.25rem;
+            top: -.4rem;
+            left: -.1rem;
             z-index: -1;
             display: block;
             width: 2rem;
