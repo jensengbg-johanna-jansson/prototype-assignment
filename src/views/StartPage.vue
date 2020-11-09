@@ -74,7 +74,7 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: fixed;
+  position: absolute;
 }
 .pop-overlay {
   height: 100vh;

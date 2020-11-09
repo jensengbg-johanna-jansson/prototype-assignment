@@ -50,9 +50,6 @@ export default {};
   .new-logo {
     grid-area: new-logo;
     justify-self: start;
-
-    //   .new-logo-img {
-    //   }
   }
   .to-support {
     grid-area: to-support;

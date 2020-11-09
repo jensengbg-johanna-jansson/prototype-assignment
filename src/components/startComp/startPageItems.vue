@@ -61,9 +61,10 @@ export default {
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 10%;
+  padding-top: 7%;
 
   .btns {
+    cursor: pointer;
     background: $white;
     color: #2f2f2f;
     font-size: $placeholdersize;
