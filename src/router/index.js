@@ -10,66 +10,73 @@ import Dropoff from '../views/Dropoff.vue'
 import NewPatient from '../views/NewPatient.vue'
 import FirstAid from '../views/FirstAid.vue'
 import Heatstroke from '../views/Heatstroke.vue'
+import Settings from '../views/Settings.vue'
 
-const routes = [
-  {
-    path: '/',
-    name: 'StartPage',
-    component: StartPage
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/addtravel',
-    name: 'AddTravel',
-    component: AddTravel
-  },
-  {
-    path: '/travelhistory',
-    name: 'TravelHistory',
-    component: TravelHistory
-  },
-  {
-    path: '/travelhistoryexpanded',
-    name: 'TravelHistoryExpanded',
-    component: TravelHistoryExpanded
-  },
-  {
-    path: '/pickup',
-    name: 'Pickup',
-    component: Pickup
-  },
-  {
-    path: '/dropoff',
-    name: 'Dropoff',
-    component: Dropoff
-  },
-  {
-    path: "/patient-status",
-    name: "PatientStatus",
-    component: PatientStatus
-  },
-  {
-    path: "/new-patient",
-    name: "NewPatient",
-    component: NewPatient
-    path: "/firstaid",
-    name: "FirstAid",
-    component: FirstAid
-  },
-  {
-    path: "/heatstroke",
-    name: "Heatstroke",
-    component: Heatstroke
-  }
+const routes = [{
+        path: '/',
+        name: 'StartPage',
+        component: StartPage
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/addtravel',
+        name: 'AddTravel',
+        component: AddTravel
+    },
+    {
+        path: '/travelhistory',
+        name: 'TravelHistory',
+        component: TravelHistory
+    },
+    {
+        path: '/travelhistoryexpanded',
+        name: 'TravelHistoryExpanded',
+        component: TravelHistoryExpanded
+    },
+    {
+        path: '/pickup',
+        name: 'Pickup',
+        component: Pickup
+    },
+    {
+        path: '/dropoff',
+        name: 'Dropoff',
+        component: Dropoff
+    },
+    {
+        path: "/patient-status",
+        name: "PatientStatus",
+        component: PatientStatus
+    },
+    {
+        path: "/new-patient",
+        name: "NewPatient",
+        component: NewPatient
+    },
+    {
+        path: "/firstaid",
+        name: "FirstAid",
+        component: FirstAid
+    },
+    {
+        path: "/heatstroke",
+        name: "Heatstroke",
+        component: Heatstroke
+    },
+    {
+        path: "/settings",
+        name: "Settings",
+        component: Settings
+    }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+    history: createWebHashHistory(),
+    routes
 })
 
 export default router
