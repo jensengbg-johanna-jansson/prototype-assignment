@@ -3,11 +3,11 @@
       <nav>
         <button class="first-aid-button" @click="goToFirstAid">
           <img src="../assets/AID.svg" alt="">
-          first aid
+          First Aid
         </button>
       </nav>
       <section class="content">
-        <h1>Pick up</h1>
+        <h1>Pick Up</h1>
         <p class="info">Check all that applies to the patient</p>
         <ul>
           <li v-for="status in medicalStatus" :key="status.name">

@@ -8,7 +8,7 @@
         <div id="icon-hospital-user">
           <i class="fas fa-hospital-user"></i>
         </div>
-        <span class="title-new-patient">new patient</span>
+        <span class="title-new-patient">New Patient</span>
       </section>
       <section id="start">
         <div class="patient-id">

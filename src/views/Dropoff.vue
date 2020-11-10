@@ -1,7 +1,7 @@
 <template>
     <section class="dropoff">
         <div class="dropoff-sidebar">
-            <h1 class="heading">Pick up patient</h1>
+            <h1 class="heading">Pick Up Patient</h1>
             <directionsBox :isDropoff="true" class="dropoff-mobile" />
             <directionsBoxDesktop :isDropoff="true" class="dropoff-desktop" />
             <primaryButton @click="goToHome()" class="dropoff-sidebar-button" :text="'drop off'" />

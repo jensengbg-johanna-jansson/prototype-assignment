@@ -2,24 +2,24 @@
   <div class="wrapper">
     <SettingsNav />
     <SettingsHeader title="security" />
-    <button @click="showActivityFunc">login activity</button>
+    <button @click="showActivityFunc">Login Activity</button>
 
     <section class="log" v-if="showActivity">
-      <h3>konza, kenya</h3>
+      <h3>Konza, Kenya</h3>
       <p class="status green">active now</p>
       <p>Ulefone note 8p</p>
     </section>
 
     <section class="log" v-if="showActivity">
-      <h3>konza, kenya</h3>
+      <h3>Konza, Kenya</h3>
       <p class="status">22 july 2020</p>
       <p>Ulefone note 8p</p>
     </section>
 
-    <button @click="showColleaguesFunc">colleagues</button>
+    <button @click="showColleaguesFunc">Colleagues</button>
 
     <section class="log" v-if="showColleagues">
-      <h3>konza, kenya</h3>
+      <h3>Konza, Kenya</h3>
       <p class="status">2 km away</p>
 
       <section class="callCont">
@@ -31,7 +31,7 @@
     </section>
 
     <section class="log" v-if="showColleagues">
-      <h3>konza, kenya</h3>
+      <h3>Konza, Kenya</h3>
       <p class="status">12 km away</p>
 
       <section class="callCont">
@@ -42,7 +42,7 @@
       </section>
     </section>
 
-    <button @click="showPasswordFunc">Change password</button>
+    <button @click="showPasswordFunc">Change Password</button>
 
     <section class="password">
       <input type="text" placeholder="Current password" v-if="showPassword" />

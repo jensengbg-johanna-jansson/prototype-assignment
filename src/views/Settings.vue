@@ -11,7 +11,7 @@
       <ul>
         <li class="selectDiv">
           <select name="languages" id="">
-            <option value="english">english</option>
+            <option value="english">English</option>
             <option value="Swahili">Swahili</option>
             <option value="Kikuyu">Kikuyu</option>
             <option value="Luo">Luo</option>
@@ -20,19 +20,19 @@
           </select>
         </li>
         <li>
-          <button class="btn" @click="navToSecurity">security</button>
+          <button class="btn" @click="navToSecurity">Security</button>
         </li>
         <li>
-          <button class="btn" @click="navToSupport">support</button>
+          <button class="btn" @click="navToSupport">Support</button>
         </li>
         <li>
-          <button class="btn" @click="navToAbout">about</button>
+          <button class="btn" @click="navToAbout">About</button>
         </li>
         <li>
           <section class="switches">
             <div class="switch">
               <label for="notification">
-                <p>notification</p>
+                <p>Notification</p>
               </label>
               <div>
                 <input type="checkbox" name="notification" id="" />
@@ -41,7 +41,7 @@
             </div>
             <div class="switch">
               <label for="sound">
-                <p>sound</p>
+                <p>Sound</p>
               </label>
               <div>
                 <input type="checkbox" name="sound" id="" checked />

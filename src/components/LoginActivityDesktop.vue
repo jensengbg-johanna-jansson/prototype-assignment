@@ -5,7 +5,7 @@
       <section id="activeNow">
         <div class="active">
           <h2 class="name">Konza, Kenya</h2>
-          <span class="active-now">Active now</span>
+          <span class="active-now">Active Now</span>
           <p>Ulefone note 8p</p>
         </div>
       </section>
