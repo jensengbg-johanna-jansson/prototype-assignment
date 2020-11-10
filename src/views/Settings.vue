@@ -1,58 +1,75 @@
 <template>
-  <div class="menu">
-    <SettingsNav />
-    <h2>Settings</h2>
-    <ul>
-      <li class="selectDiv">
-        <select name="languages" id="">
-          <option value="english">english</option>
-          <option value="Swahili">Swahili</option>
-          <option value="Kikuyu">Kikuyu</option>
-          <option value="Luo">Luo</option>
-          <option value="Akamba">Akamba</option>
-          <option value="Maa">Maa</option>
-        </select>
-      </li>
-      <li>
-        <button class="btn" @click="navToSecurity">security</button>
-      </li>
-      <li>
-        <button class="btn" @click="navToSupport">support</button>
-      </li>
-      <li>
-        <button class="btn" @click="navToAbout">about</button>
-      </li>
-      <li>
-        <section class="switches">
-          <div class="switch">
-            <label for="notification">
-              <p>notification</p>
-            </label>
-            <div>
-              <input type="checkbox" name="notification" id="" />
-              <div class="slider"></div>
+  <div>
+    <section class="settings-desktop" v-if="!isMobile">
+        <img class="exit-button" @click="goToStartPage()" src="../assets/close-button.png">
+        <SettingsMenuDesktop class="settings-menu" />
+        <ChangeLanguageDesktop class="change-language" />
+    </section>
+    <div class="menu" v-else>
+      <SettingsNav />
+      <h2>Settings</h2>
+      <ul>
+        <li class="selectDiv">
+          <select name="languages" id="">
+            <option value="english">english</option>
+            <option value="Swahili">Swahili</option>
+            <option value="Kikuyu">Kikuyu</option>
+            <option value="Luo">Luo</option>
+            <option value="Akamba">Akamba</option>
+            <option value="Maa">Maa</option>
+          </select>
+        </li>
+        <li>
+          <button class="btn" @click="navToSecurity">security</button>
+        </li>
+        <li>
+          <button class="btn" @click="navToSupport">support</button>
+        </li>
+        <li>
+          <button class="btn" @click="navToAbout">about</button>
+        </li>
+        <li>
+          <section class="switches">
+            <div class="switch">
+              <label for="notification">
+                <p>notification</p>
+              </label>
+              <div>
+                <input type="checkbox" name="notification" id="" />
+                <div class="slider"></div>
+              </div>
             </div>
-          </div>
-          <div class="switch">
-            <label for="sound">
-              <p>sound</p>
-            </label>
-            <div>
-              <input type="checkbox" name="sound" id="" checked />
-              <div class="slider"></div>
+            <div class="switch">
+              <label for="sound">
+                <p>sound</p>
+              </label>
+              <div>
+                <input type="checkbox" name="sound" id="" checked />
+                <div class="slider"></div>
+              </div>
             </div>
-          </div>
-        </section>
-      </li>
-    </ul>
+          </section>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 import SettingsNav from "@/components/settingsComp/SettingsNav.vue"
+import SettingsMenuDesktop from "../components/settingsComp/SettingsMenuDesktop.vue"
+import ChangeLanguageDesktop from "../components/settingsComp/ChangeLanguageDesktop.vue"
+
 export default {
   components: {
     SettingsNav,
+    SettingsMenuDesktop,
+    ChangeLanguageDesktop
+  },
+  data() {
+    return {
+      isMobile: false
+    }
   },
   methods: {
     navToAbout: function() {
@@ -64,6 +81,9 @@ export default {
     navToSupport: function() {
       this.$router.push("/settings-support")
     },
+    goToStartPage() {
+      this.$router.push({ path: '/' });
+    }
   },
 }
 </script>
@@ -214,4 +234,27 @@ export default {
     }
   }
 }
+  .settings-desktop {
+      display: grid;
+      grid-template-columns: 20rem 1fr;
+      justify-items: center;
+  }
+
+  .exit-button {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+  }
+  .exit-button:hover {
+      cursor: pointer;
+  }
+
+  .settings-menu {
+      grid-column: 1 / 2;
+  }
+
+  .change-language {
+      grid-column: 2 / 3;
+  }
 </style>
