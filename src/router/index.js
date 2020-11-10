@@ -4,6 +4,7 @@ import Login from '../views/Login.vue'
 import AddTravel from '../views/AddTravel.vue'
 import TravelHistory from '../views/TravelHistory.vue'
 import TravelHistoryExpanded from '../views/TravelHistoryExpanded.vue'
+import TravelHistoryLarge from '../components/TravelHistoryLarge.vue'
 import PatientStatus from '../views/PatientStatus.vue'
 import Pickup from '../views/Pickup.vue'
 import Dropoff from '../views/Dropoff.vue'
@@ -33,7 +34,14 @@ const routes = [{
     {
         path: '/travelhistory',
         name: 'TravelHistory',
-        component: TravelHistory
+        component: TravelHistory,
+        children: [
+          {
+            path: '/travelinfo',
+            name: 'TravelInfo',
+            component: TravelHistoryLarge
+          }
+        ]
     },
     {
         path: '/travelhistoryexpanded',

@@ -162,7 +162,7 @@ export default {
 
         .aside-left {
             height: 100%;
-            box-shadow: 2px 0px 2px 2px;
+            box-shadow: 2px 0px 2px rgba(0, 0, 0, .25);
         }
     }
 </style>

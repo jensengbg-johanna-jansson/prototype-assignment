@@ -1,5 +1,6 @@
 <template>
     <section class="aside-left">
+        <img class="exit-button" @click="goToPage()" src="../assets/close-button.png">
         <img class="logo" src="../assets/logo.png">
         <h1>Travel History</h1>
         <section class="history-small">
@@ -13,10 +14,7 @@
                     <h4>Travel Date</h4>
                     <p>23/07/2020</p>
                 </div>
-                <div class="img">
-                    <img class="arrow select white-arrow" src="../assets/arrow-white.png" alt="Arrow">
-                    <img class="arrow green-arrow" src="../assets/arrow.png" alt="Arrow">
-                </div>
+                <i class="fas fa-chevron-right arrow"></i>
             </section>
             <section class="info">
                 <div class="id">
@@ -27,9 +25,7 @@
                     <h4>Travel Date</h4>
                     <p>22/07/2020</p>
                 </div>
-                <div class="img">
-                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
-                </div>
+                <i class="fas fa-chevron-right arrow"></i>
             </section>
             <section class="info">
                 <div class="id">
@@ -40,9 +36,7 @@
                     <h4>Travel Date</h4>
                     <p>20/07/2020</p>
                 </div>
-                <div class="img">
-                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
-                </div>
+                <i class="fas fa-chevron-right arrow"></i>
             </section>
             <section class="info">
                 <div class="id">
@@ -53,9 +47,7 @@
                     <h4>Travel Date</h4>
                     <p>09/07/2020</p>
                 </div>
-                <div class="img">
-                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
-                </div>
+                <i class="fas fa-chevron-right arrow"></i>
             </section>
             <section class="info">
                 <div class="id">
@@ -66,9 +58,7 @@
                     <h4>Travel Date</h4>
                     <p>29/06/2020</p>
                 </div>
-                <div class="img">
-                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
-                </div>
+                <i class="fas fa-chevron-right arrow"></i>
             </section>
         </section>
     </section>
@@ -78,8 +68,18 @@
 export default {
     methods: {
         goToExpandedHistory() {
-            this.$router.push({ path: 'travelhistoryexpanded' });
+            let viewportWidth = window.innerWidth;
+            
+            if(viewportWidth < 768) {
+                this.$router.push({ path: 'travelhistoryexpanded' });
+            } else {
+                this.$router.push({ path: '/travelinfo' });
+            }
+        },
+        goToPage() {
+            this.$router.push({ path: '/' });
         }
+
     }
 }
 </script>
@@ -88,23 +88,25 @@ export default {
     .arrow {
         display: none;
     }
+    .exit-button {
+        display: none;
+    }
 
     h1 {
         @include headingLarge();
     }
 
-    .history-small {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
     .info {
+        padding: 1rem 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
-        border-top: 1px solid $secondary;
         border-bottom: 1px solid $secondary;
         cursor: pointer;
+        margin: 0 1.5rem;
+    }
+    .info:first-child {
+        border-top: 1px solid $secondary;
     }
 
     .id {
@@ -124,44 +126,60 @@ export default {
     }
 
     p {
-        margin: 0;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
         font-size: $txtsize;
         font-family: $font;
     }
 
     @media only screen and (min-width: 768px) {
+        .history-small {
+            width: 100%;
+        }
+        .exit-button {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+        .exit-button:hover {
+            cursor: pointer;
+        }
+
         .info {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: max-content max-content 1fr;
+            grid-column-gap: .5rem;
+            align-items: center;
+            transition: all .3s ease;
+        }
+        .info:hover {
+            margin-right: 0;
+            background: $primary;
+            color: #ffffff
+        }
+
+        .info:hover .arrow {
+            color: #ffffff;
         }
 
         .id {
             margin-left: 1rem;
         }
 
-        /*.selected {
-            background-color: #C61E23;
-            color: white;
-        }*/
-
         .arrow {
-            display: flex;
-            grid-column: 3 / 4;
-            margin: 2rem;
-        }
-
-        .white-arrow {
-            display: none;
-        }
-
-        .green-arrow {
             display: block;
+            grid-column: 3 / 4;
+            font-size: 2rem;
+            color: $secondary;
+            justify-self: end;
+            margin-right: 1rem;
+            transition: all .2s ease;
         }
 
         .aside-left {
             height: 100%;
-            box-shadow: 2px 0px 2px 2px;
+            box-shadow: 2px 0px 2px rgba(0, 0, 0, .25);
+            z-index: 99;
+            padding-top: 2rem;
+            position: relative;
         }
     }
 </style>
