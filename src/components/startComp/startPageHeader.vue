@@ -4,29 +4,24 @@
       <div class="new-logo">
         <img class="new-logo-img" src="../../assets/newLogo.png" alt="logo" />
       </div>
-
       <div class="to-support">
         <p @click="goToSupport()" class="support">Support</p>
       </div>
-
-      <div class="to-terms">
+      <div @click="goToTerms()" class="to-terms">
         <p class="terms">Terms Of Use</p>
       </div>
-
-      <div class="to-policy">
+      <div @click="goToPolicy()" class="to-policy">
         <p class="policy">Data Policy</p>
       </div>
-
       <div class="acc">
-        <button class="user-button">
+        <button @click="goToSecurity()" class="user-button">
           <i class="far fa-user-circle"></i>
           Account
         </button>
       </div>
-
       <div class="out">
-        <button class="user-button">
-          <i @click="logOut" class="fas fa-sign-out-alt"></i>
+        <button @click="logOut()" class="user-button">
+          <i class="fas fa-sign-out-alt"></i>
           Log out
         </button>
       </div>
@@ -35,7 +30,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goToSupport() {
+      this.$router.push({ path: "settings-support" });
+    },
+    goToTerms() {
+      this.$router.push({ path: "settings-about" });
+    },
+    goToPolicy() {
+      this.$router.push({ path: "settings-about" });
+    },
+    goToSecurity() {
+      this.$router.push({ path: "settings-security" });
+    },
+    logOut() {
+      this.$router.push({ path: "login" });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -50,16 +63,20 @@ export default {};
   .new-logo {
     grid-area: new-logo;
     justify-self: start;
+    cursor: none;
   }
   .to-support {
+    cursor: pointer;
     grid-area: to-support;
     justify-self: center;
   }
   .to-terms {
+    cursor: pointer;
     grid-area: to-terms;
     justify-self: center;
   }
   .to-policy {
+    cursor: pointer;
     grid-area: to-policy;
     justify-self: center;
   }
@@ -106,6 +123,9 @@ export default {};
     @include headingLarge();
     font-weight: 500;
     font-size: $placeholdersize;
+  }
+  p:hover {
+    color: $primaryDark;
   }
 }
 </style>

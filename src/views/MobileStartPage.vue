@@ -8,8 +8,8 @@
       />
     </transition>
     <div class="out">
-      <button class="user-button">
-        <i @click="logOut" class="fas fa-sign-out-alt"></i>
+      <button @click="logOut" class="user-button">
+        <i class="fas fa-sign-out-alt"></i>
         Log out
       </button>
     </div>
@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     logOut() {
-      this.$router.push("/login");
+      this.$router.push({ path: 'login' });
     },
     noticeInvisible() {
       this.noticeVisible = false;
