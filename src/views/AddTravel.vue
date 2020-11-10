@@ -26,7 +26,7 @@
                     </form>
                 </section>
             </section>
-            <primaryButton :text="'Add'" />
+            <primaryButton @click="goToPickUp" :text="'Add'" />
         </section>
     </section>
 </template>
