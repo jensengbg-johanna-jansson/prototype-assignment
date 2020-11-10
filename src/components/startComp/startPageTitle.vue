@@ -9,7 +9,7 @@
       </div>
       <article class="info">
         <p>
-          Thank you for your contribiotion Konza!<br />
+          Thank you for your contribution Konza!<br />
           You have saved 13 lives this month
         </p>
       </article>

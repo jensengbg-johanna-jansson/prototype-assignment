@@ -3,9 +3,9 @@
         <img src="../../assets/logo.png" alt="">
         <section class="navigation">
             <router-link @click="goToSettings" to="/settings">Settings</router-link>
-            <router-link @click="goToSecurity" to="/security">Security</router-link>
-            <router-link @click="goToSupport" to="/support">Support</router-link>
-            <router-link @click="goToAbout" to="/about">About</router-link>
+            <router-link @click="goToSecurity" to="/settings-security">Security</router-link>
+            <router-link @click="goToSupport" to="/settings-support">Support</router-link>
+            <router-link @click="goToAbout" to="/settings-about">About</router-link>
         </section>
     </section>
 </template>
