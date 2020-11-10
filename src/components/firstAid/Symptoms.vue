@@ -8,7 +8,7 @@
             <h4>Pre-Eclampsia</h4>
         </div>
         <div class="symptoms">
-            <h4>Sever Pain</h4>
+            <h4>Severe Pain</h4>
         </div>
         <span></span>
         <div class="symptoms">
@@ -19,7 +19,7 @@
         </div>
         <span></span>
         <div class="symptoms">
-            <h4>Sever Bleeding</h4>
+            <h4>Severe Bleeding</h4>
         </div>
         <div class="symptoms">
             <h4>Hypothermia</h4>

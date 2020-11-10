@@ -27,7 +27,7 @@
       <div class="out">
         <button class="user-button">
           <i @click="logOut" class="fas fa-sign-out-alt"></i>
-          Log out
+          Log Out
         </button>
       </div>
     </section>

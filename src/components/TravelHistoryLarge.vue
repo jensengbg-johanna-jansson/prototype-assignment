@@ -31,27 +31,24 @@
                         <h4>Pre-eclampsia</h4>
                         <p>Patient shows sign of pre-eclampsia</p>
                         <img src="../assets/checkbox.png" alt="Checkbox">
-                        <!--<input type="checkbox">-->
                     </div>
                     <div class="severe-bleeding">
                         <h4>Severe Bleeding</h4>
                         <p>Patient is bleeding at time of pick up</p>
                         <img src="../assets/checkbox-checked.png" alt="Checkbox Checked">
-                        <!--<input type="checkbox" checked>-->
                         </div>
                     <div class="severe-pain">
                         <h4>Severe Pain</h4>
-                        <p>Patient has severe pain in</p>
+                        <p>Patient has severe pain</p>
                         <img src="../assets/checkbox.png" alt="Checkbox">
-                        <!--<input type="checkbox">-->
                     </div>
                 </section>
             </section>
             <section class="travel-report">
                 <h2>Travel Report</h2>
-                <directionsMap 
+                <directionsMap
                 class="travel-report-map"
-                :hideAmbulance="true" 
+                :hideAmbulance="true"
                 :showHospital="true" />
             </section>
         </section>
