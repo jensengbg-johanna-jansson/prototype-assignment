@@ -1,37 +1,31 @@
 <template>
     <section>
-        <Header class="header" />
-        <section id="container">
-            <section class="aside-left">
-                <TravelHistorySmall />
-            </section>
+        <section class="travel-history-container">
+            <TravelHistorySmall class="travel-history-left" />
             <section class="aside-right">
-                <TravelHistoryLarge />
+                <router-view></router-view>
             </section>
         </section>
     </section>
 </template>
 
 <script>
-import Header from "../components/globalComp/Header.vue"
 import TravelHistorySmall from "../components/TravelHistorySmall.vue"
-import TravelHistoryLarge from "../components/TravelHistoryLarge.vue"
 
 export default {
     components: {
-        Header,
         TravelHistorySmall,
-        TravelHistoryLarge
-    }
+    },
 }
 </script>
 
 <style lang="scss" scoped>
-    #container {
+    .travel-history-container {
         display: grid;
         grid-template-columns: 1fr;
+        height: 100vh;
     }
-    .aside-left {
+    .travel-history-left {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,18 +36,14 @@ export default {
     }
 
     @media only screen and (min-width: 768px) {
-        #container {
+        .travel-history-container {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 25rem 1fr;
         }
 
         .aside-right {
             display: block;
-            grid-column: 2 / 3;
-        }
-
-        .header {
-            display: none;
+            background: rgba($color: #c4c4c4, $alpha: .03);
         }
     }
 </style>

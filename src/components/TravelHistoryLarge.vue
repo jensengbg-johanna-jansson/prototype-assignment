@@ -72,8 +72,10 @@ export default {
 <style lang="scss" scoped>
     .header {
         display: grid;
-        grid-template-columns: 1fr 3fr;
-        margin-top: 2rem;
+        grid-template-columns: 2rem 1fr 2rem;
+        align-items: center;
+        justify-items: center;
+        margin: 2rem 0;
     }
 
     h1 {
@@ -88,8 +90,7 @@ export default {
         justify-content: center;
         border-bottom: 1px solid $primary;
         width: 14rem;
-        margin: auto;
-        margin-top: 2rem;
+        margin-bottom: 1rem;
     }
 
     h4 {
@@ -97,17 +98,36 @@ export default {
     }
 
     p {
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 0;
-        margin-left: 2rem;
         font-family: $font;
         font-size: $txtsize;
+    }
+
+    .history-large {
+        padding: 1.5rem;
+    }
+
+    .patient-id {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p, h4 {
+            align-self: flex-start;
+        }
     }
 
     .travel-information {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .sick-report {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
     }
 
     .pre-eclampsia {
@@ -176,6 +196,11 @@ export default {
         font-size: 12px;
     }
 
+    .travel-report {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .travel-report-map {
         position: relative;
     }
@@ -187,6 +212,7 @@ export default {
 
         .travel-information > .date {
             grid-row: 1 / 2;
+            margin-bottom: 2rem;
         }
 
         .travel-information > .start, .travel-information > .end {
@@ -196,6 +222,14 @@ export default {
         .history-large {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            padding: 2rem;
+            width: 100%;
+            max-width: 1080px;
+        }
+
+        .aside-right {
+            display: flex;
+            justify-content: center;
         }
 
         .patient-id {

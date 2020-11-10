@@ -2,8 +2,8 @@
     <div class="map">
         <div class="map-container">
             <div class="map-wrapper">
-                <ambualnceMarker 
-                class="map-ambulance-marker" 
+                <ambualnceMarker
+                class="map-ambulance-marker"
                 :isDropoff="showHospital"
                 v-if="!hideAmbulance" />
                 <i v-if="showHospital" class="fas fa-hospital-symbol hospital-marker"></i>
@@ -44,8 +44,8 @@ export default {
 
         svg {
             path {
-                stroke: $secondary; 
-                stroke-width: 5px; 
+                stroke: $secondary;
+                stroke-width: 5px;
             }
         }
         .patient-marker {

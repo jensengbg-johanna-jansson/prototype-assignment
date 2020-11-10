@@ -1,11 +1,7 @@
 <template>
     <section>
         <Header />
-        <section id="container">
-            <section class="aside-right">
-                <TravelHistoryLarge />
-            </section>
-        </section>
+        <TravelHistoryLarge />
     </section>
 </template>
 

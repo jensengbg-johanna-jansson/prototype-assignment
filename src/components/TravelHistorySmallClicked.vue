@@ -1,6 +1,5 @@
 <template>
     <section class="aside-left">
-        <img class="exit-button" @click="goToPage()" src="../assets/close-button.png">
         <img class="logo" src="../assets/logo.png">
         <h1>Travel History</h1>
         <section class="history-small">
@@ -14,7 +13,9 @@
                     <h4>Travel Date</h4>
                     <p>23/07/2020</p>
                 </div>
-                <i class="fas fa-chevron-right arrow"></i>
+                <div class="img">
+                    <img class="arrow select" src="../assets/arrow-white.png" alt="Arrow">
+                </div>
             </section>
             <section class="info">
                 <div class="id">
@@ -25,7 +26,9 @@
                     <h4>Travel Date</h4>
                     <p>22/07/2020</p>
                 </div>
-                <i class="fas fa-chevron-right arrow"></i>
+                <div class="img">
+                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
+                </div>
             </section>
             <section class="info">
                 <div class="id">
@@ -36,7 +39,9 @@
                     <h4>Travel Date</h4>
                     <p>20/07/2020</p>
                 </div>
-                <i class="fas fa-chevron-right arrow"></i>
+                <div class="img">
+                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
+                </div>
             </section>
             <section class="info">
                 <div class="id">
@@ -47,7 +52,9 @@
                     <h4>Travel Date</h4>
                     <p>09/07/2020</p>
                 </div>
-                <i class="fas fa-chevron-right arrow"></i>
+                <div class="img">
+                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
+                </div>
             </section>
             <section class="info">
                 <div class="id">
@@ -58,7 +65,9 @@
                     <h4>Travel Date</h4>
                     <p>29/06/2020</p>
                 </div>
-                <i class="fas fa-chevron-right arrow"></i>
+                <div class="img">
+                    <img class="arrow" src="../assets/arrow.png" alt="Arrow">
+                </div>
             </section>
         </section>
     </section>
@@ -68,18 +77,8 @@
 export default {
     methods: {
         goToExpandedHistory() {
-            let viewportWidth = window.innerWidth;
-            
-            if(viewportWidth < 768) {
-                this.$router.push({ path: 'travelhistoryexpanded' });
-            } else {
-                this.$router.push({ path: '/travelinfo' });
-            }
-        },
-        goToPage() {
-            this.$router.push({ path: '/' });
+            this.$router.push({ path: 'travelhistoryexpanded' });
         }
-
     }
 }
 </script>
@@ -88,25 +87,23 @@ export default {
     .arrow {
         display: none;
     }
-    .exit-button {
-        display: none;
-    }
 
     h1 {
         @include headingLarge();
     }
 
+    .history-small {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
     .info {
-        padding: 1rem 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
+        border-top: 1px solid $secondary;
         border-bottom: 1px solid $secondary;
         cursor: pointer;
-        margin: 0 1.5rem;
-    }
-    .info:first-child {
-        border-top: 1px solid $secondary;
     }
 
     .id {
@@ -126,60 +123,46 @@ export default {
     }
 
     p {
+        margin: 0;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
         font-size: $txtsize;
         font-family: $font;
     }
 
     @media only screen and (min-width: 768px) {
-        .history-small {
-            width: 100%;
-        }
-        .exit-button {
+        .logo {
             display: block;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-        }
-        .exit-button:hover {
-            cursor: pointer;
+            margin: auto;
         }
 
         .info {
-            grid-template-columns: max-content max-content 1fr;
-            grid-column-gap: .5rem;
-            align-items: center;
-            transition: all .3s ease;
-        }
-        .info:hover {
-            margin-right: 0;
-            background: $primary;
-            color: #ffffff
-        }
-
-        .info:hover .arrow {
-            color: #ffffff;
+            grid-template-columns: 1fr 1fr 1fr;
         }
 
         .id {
             margin-left: 1rem;
         }
 
+        .selected {
+            background-color: #C61E23;
+            color: white;
+        }
+
         .arrow {
-            display: block;
+            display: flex;
             grid-column: 3 / 4;
-            font-size: 2rem;
-            color: $secondary;
-            justify-self: end;
-            margin-right: 1rem;
-            transition: all .2s ease;
+            margin: 2rem;
+        }
+
+        .select {
+            margin-left: 6rem;
+            margin-right: 0;
         }
 
         .aside-left {
             height: 100%;
             box-shadow: 2px 0px 2px rgba(0, 0, 0, .25);
-            z-index: 99;
-            padding-top: 2rem;
-            position: relative;
         }
     }
 </style>
