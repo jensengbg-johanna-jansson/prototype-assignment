@@ -49,9 +49,9 @@
             </section>
             <section class="travel-report">
                 <h2>Travel Report</h2>
-                <directionsMap 
+                <directionsMap
                 class="travel-report-map"
-                :hideAmbulance="true" 
+                :hideAmbulance="true"
                 :showHospital="true" />
             </section>
         </section>
@@ -93,10 +93,12 @@ export default {
         width: 14rem;
         margin: auto;
         margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     h4 {
         @include subHeading();
+        padding: 0.5rem;
     }
 
     p {
@@ -106,6 +108,10 @@ export default {
         margin-left: 2rem;
         font-family: $font;
         font-size: $txtsize;
+    }
+
+    .patient-id {
+        margin-left: 2rem;
     }
 
     .travel-information {

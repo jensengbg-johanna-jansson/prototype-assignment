@@ -15,77 +15,76 @@ import Heatstroke from '../views/Heatstroke.vue'
 import LoginActivityDesktop from '../components/LoginActivityDesktop.vue'
 
 
-const routes = [
-  {
-    path: '/',
-    name: 'StartPage',
-    component: StartPage
-  },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/addtravel',
-    name: 'AddTravel',
-    component: AddTravel
-  },
-  {
-    path: '/travelhistory',
-    name: 'TravelHistory',
-    component: TravelHistory
-  },
-  {
-    path: '/travelhistoryexpanded',
-    name: 'TravelHistoryExpanded',
-    component: TravelHistoryExpanded
-  },
-  {
-    path: '/pickup',
-    name: 'Pickup',
-    component: Pickup
-  },
-  {
-    path: '/dropoff',
-    name: 'Dropoff',
-    component: Dropoff
-  },
-  {
-    path: "/patient-status",
-    name: "PatientStatus",
-    component: PatientStatus
-  },
-  {
-    path: "/settings",
-    name: "Settings",
-    component: Settings
-  },
-  {
-    path: "/new-patient",
-    name: "NewPatient",
-    component: NewPatient
-  },
-  {
-    path: "/firstaid",
-    name: "FirstAid",
-    component: FirstAid
-  },
-  {
-    path: "/heatstroke",
-    name: "Heatstroke",
-    component: Heatstroke
-  },
-  {
-    path: "/loginactivity",
-    name: "LoginActivityDesktop",
-    component: LoginActivityDesktop
-  }
+const routes = [{
+        path: '/',
+        name: 'StartPage',
+        component: StartPage
+    },
+    {
+        path: '/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/addtravel',
+        name: 'AddTravel',
+        component: AddTravel
+    },
+    {
+        path: '/travelhistory',
+        name: 'TravelHistory',
+        component: TravelHistory
+    },
+    {
+        path: '/travelhistoryexpanded',
+        name: 'TravelHistoryExpanded',
+        component: TravelHistoryExpanded
+    },
+    {
+        path: '/pickup',
+        name: 'Pickup',
+        component: Pickup
+    },
+    {
+        path: '/dropoff',
+        name: 'Dropoff',
+        component: Dropoff
+    },
+    {
+        path: "/patient-status",
+        name: "PatientStatus",
+        component: PatientStatus
+    },
+    {
+        path: "/settings",
+        name: "Settings",
+        component: Settings
+    },
+    {
+        path: "/new-patient",
+        name: "NewPatient",
+        component: NewPatient
+    },
+    {
+        path: "/firstaid",
+        name: "FirstAid",
+        component: FirstAid
+    },
+    {
+        path: "/heatstroke",
+        name: "Heatstroke",
+        component: Heatstroke
+    },
+    {
+        path: "/loginactivity",
+        name: "LoginActivityDesktop",
+        component: LoginActivityDesktop
+    }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
-  routes
+    history: createWebHashHistory(),
+    routes
 })
 
 export default router

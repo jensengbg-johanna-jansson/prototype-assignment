@@ -48,8 +48,9 @@ export default {
         }
 
         .aside-right {
-            display: block;
-            grid-column: 2 / 3;
+            display: none;
+            /*display: block;
+            grid-column: 2 / 3;*/
         }
 
         .header {

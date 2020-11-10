@@ -14,8 +14,7 @@
                     <p>23/07/2020</p>
                 </div>
                 <div class="img">
-                    <img class="arrow select white-arrow" src="../assets/arrow-white.png" alt="Arrow">
-                    <img class="arrow green-arrow" src="../assets/arrow.png" alt="Arrow">
+                    <img class="arrow select" src="../assets/arrow-white.png" alt="Arrow">
                 </div>
             </section>
             <section class="info">
@@ -132,6 +131,11 @@ export default {
     }
 
     @media only screen and (min-width: 768px) {
+        .logo {
+            display: block;
+            margin: auto;
+        }
+
         .info {
             grid-template-columns: 1fr 1fr 1fr;
         }
@@ -140,10 +144,10 @@ export default {
             margin-left: 1rem;
         }
 
-        /*.selected {
+        .selected {
             background-color: #C61E23;
             color: white;
-        }*/
+        }
 
         .arrow {
             display: flex;
@@ -151,12 +155,9 @@ export default {
             margin: 2rem;
         }
 
-        .white-arrow {
-            display: none;
-        }
-
-        .green-arrow {
-            display: block;
+        .select {
+            margin-left: 6rem;
+            margin-right: 0;
         }
 
         .aside-left {
