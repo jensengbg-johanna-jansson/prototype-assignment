@@ -40,7 +40,7 @@ export default {
         },
         {
           lable: "Severe pain",
-          description: "Patient has severe pain in"
+          description: "Patient has severe pain"
         }
       ]
     }
