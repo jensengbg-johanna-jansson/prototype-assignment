@@ -8,10 +8,13 @@ import PatientStatus from '../views/PatientStatus.vue'
 import Pickup from '../views/Pickup.vue'
 import Dropoff from '../views/Dropoff.vue'
 import Settings from '../views/Settings.vue'
+import SettingsAbout from "../views/SettingsAbout.vue"
+import SettingsSupport from "../views/SettingsSupport.vue"
+import SettingsSecurity from "../views/SettingsSecurity.vue"
+import Phonecall from "@/views/Phonecall.vue"
 import NewPatient from '../views/NewPatient.vue'
 import FirstAid from '../views/FirstAid.vue'
 import Heatstroke from '../views/Heatstroke.vue'
-
 import LoginActivityDesktop from '../components/LoginActivityDesktop.vue'
 
 
@@ -42,14 +45,14 @@ const routes = [
     component: TravelHistoryExpanded
   },
   {
-    path: '/pickup',
-    name: 'Pickup',
-    component: Pickup
+    path: "/pickup",
+    name: "Pickup",
+    component: Pickup,
   },
   {
-    path: '/dropoff',
-    name: 'Dropoff',
-    component: Dropoff
+    path: "/dropoff",
+    name: "Dropoff",
+    component: Dropoff,
   },
   {
     path: "/patient-status",
@@ -60,6 +63,26 @@ const routes = [
     path: "/settings",
     name: "Settings",
     component: Settings
+  },
+  {
+    path: "/settings-about",
+    name: "Settings About",
+    component: SettingsAbout,
+  },
+  {
+    path: "/settings-support",
+    name: "Settings Support",
+    component: SettingsSupport,
+  },
+  {
+    path: "/settings-security",
+    name: "Settings Security",
+    component: SettingsSecurity,
+  },
+  {
+    path: "/phonecall",
+    name: "Phonecall",
+    component: Phonecall,
   },
   {
     path: "/new-patient",
@@ -85,7 +108,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
 })
 
 export default router

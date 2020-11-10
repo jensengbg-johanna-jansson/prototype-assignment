@@ -1,7 +1,7 @@
 <template>
   <section class="healthState">
     <div class="info">
-      <h3 class="bold">{{ status }}</h3>
+      <h4 class="bold">{{ status }}</h4>
       <p class="description">{{ description }}</p>
     </div>
     <input type="checkbox" name="" id="">
@@ -29,8 +29,8 @@ export default {
   background: #efefef;
   border-radius: 1rem;
   width: 100%;
-  margin: 1.5rem 0rem;
-  padding: .8rem 1.2rem;
+  margin: 1rem 0rem;
+  padding: .6rem 1.2rem;
   @include  flex();
   align-items: center;
   justify-content: space-between;
@@ -45,7 +45,7 @@ export default {
     justify-content: flex-start;
     color: #777;
 
-    h3 {
+    h4 {
       color: #222;
       margin: .6rem 0rem;
     }

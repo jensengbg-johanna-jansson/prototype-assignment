@@ -8,7 +8,7 @@
       </nav>
       <section class="content">
         <h1>Pick up</h1>
-        <p class="info">Check all that applise to the patient</p>
+        <p class="info">Check all that applies to the patient</p>
         <ul>
           <li v-for="status in medicalStatus" :key="status.name">
             <HealthState :status="status.lable" :description="status.description"/>
@@ -28,7 +28,7 @@ export default {
     primaryButton
   },
   data: () => {
-      return{
+    return {
       medicalStatus: [
         {
           lable: "Pre-eclampsia",
@@ -114,5 +114,5 @@ export default {
         list-style: none;
       }
     }
-  }
+}
 </style>
