@@ -4,7 +4,7 @@
     <SettingsHeader title="about" />
     <section class="content">
       <article>
-        <button @click="showPolicy">data policy</button>
+        <button @click="showPolicy">Data Policy</button>
         <p v-if="policyShown">
           EEZER needs to gather and use certain information about individuals.
           These can include customers, suppliers, business contacts, employees
@@ -79,7 +79,7 @@
       ¨
 
       <article>
-        <button @click="showTerms">terms of use</button>
+        <button @click="showTerms">Terms of Use</button>
         <p v-if="termsShown">
           Last updated: 08/11/2020 Please read these Terms and Conditions
           ("Terms", "Terms and Conditions") carefully before using the

@@ -4,7 +4,7 @@
     <SettingsHeader title="support" />
 
     <button class="cta" @click="callFunc">
-      call it-support
+      Call IT-Support
     </button>
   </div>
 </template>

@@ -6,7 +6,7 @@
       <img src="../assets/user.svg" alt="person" />
     </section>
 
-    <h3 class="contact">jomo omondi</h3>
+    <h3 class="contact">Jomo Omondi</h3>
     <section class="controllers">
       <button><img src="../assets/mute-microphone.svg" alt="" /></button>
       <button><img src="../assets/speaker.svg" alt="" /></button>

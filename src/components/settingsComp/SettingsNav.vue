@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <h3>eezer app</h3>
+    <h3>Eezer App</h3>
     <button class="exit" @click="toStartPage">
       <img src="@/assets/exit.svg" alt="" />
     </button>
