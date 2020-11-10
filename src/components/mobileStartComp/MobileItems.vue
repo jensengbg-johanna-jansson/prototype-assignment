@@ -57,7 +57,7 @@ export default {
       this.$router.push({ path: 'firstaid' });
     },
     goToSupport() {
-      this.$router.push({ path: 'support' });
+      this.$router.push({ path: 'settings-support' });
     },
     goToSettings() {
       this.$router.push({ path: 'settings' });
