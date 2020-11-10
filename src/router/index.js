@@ -17,7 +17,6 @@ import FirstAid from '../views/FirstAid.vue'
 import Heatstroke from '../views/Heatstroke.vue'
 import LoginActivityDesktop from '../components/LoginActivityDesktop.vue'
 
-
 const routes = [
   {
     path: '/',

@@ -81,7 +81,8 @@ export default {
     justify-self: start;
   }
   #mobile-items {
-    margin: 2rem;
+    opacity: 0.9;
+    margin-top: 15%;
     display: grid;
     grid-template-columns: 45% 10% 45%;
     grid-template-areas: "sideLeft mid sideRight";
