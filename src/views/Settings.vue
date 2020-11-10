@@ -83,7 +83,23 @@ export default {
     },
     goToStartPage() {
       this.$router.push({ path: '/' });
+    },
+    windowResize() {
+      let windowWidth = window.innerWidth;
+
+      if(windowWidth < 768) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
     }
+  },
+  created() {
+    window.addEventListener('resize', this.windowResize);
+    this.windowResize();
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.windowResize);
   },
 }
 </script>
