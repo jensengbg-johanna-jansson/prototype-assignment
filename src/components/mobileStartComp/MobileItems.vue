@@ -18,11 +18,8 @@
     </section>
     <section id="mid">
       <div @click="goToAddTravel()" id="mobile-travel">
-        <img
-          class="mobile-travel"
-          alt="add travel"
-          src="../../assets/mobile-travel.png"
-        />
+        <i class="fas fa-motorcycle"></i>
+        <span>Add travel</span>
       </div>
     </section>
     <section id="sideRight">
@@ -48,22 +45,22 @@
 export default {
   methods: {
     goToAddTravel() {
-      this.$router.push({ path: 'addtravel' });
+      this.$router.push({ path: "addtravel" });
     },
     goToTravelHistory() {
-      this.$router.push({ path: 'travelhistory' });
+      this.$router.push({ path: "travelhistory" });
     },
     goToFirstAid() {
-      this.$router.push({ path: 'firstaid' });
+      this.$router.push({ path: "firstaid" });
     },
     goToSupport() {
-      this.$router.push({ path: 'settings-support' });
+      this.$router.push({ path: "settings-support" });
     },
     goToSettings() {
-      this.$router.push({ path: 'settings' });
-    }
-  }
-}
+      this.$router.push({ path: "settings" });
+    },
+  },
+};
 </script>
 
 <style lang="scss">
@@ -75,6 +72,23 @@ export default {
   #mid {
     grid-area: mid;
     place-self: center;
+
+    #mobile-travel {
+      width: 6rem;
+      height: 6rem;
+      position: relative;
+      background-color: $white;
+      border-radius: 50px;
+
+      @include centeredFlex();
+      flex-direction: column;
+
+      span {
+        @include headingSmall();
+        color: $primary;
+        font-size: 12px;
+      }
+    }
   }
   #sideRight {
     grid-area: sideRight;
@@ -92,9 +106,9 @@ export default {
       width: 9.3rem;
       height: 9.4rem;
     }
-    #mid img {
-      width: 7rem;
-      height: 7rem;
+    #mid i {
+      font-size: 4rem;
+      color: $primary;
       position: relative;
     }
   }
