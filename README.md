@@ -25,3 +25,5 @@ https://www.figma.com/file/cxPP9s0RZneEEwPY1ME07z/Eezer-app-grupp-6?node-id=18%3
 ### Heroku länk
 https://eezer.herokuapp.com/#/
 
+### Eezer
+Vi är okej med att vårt meterial i denna uppgiften delas med Eezer.
