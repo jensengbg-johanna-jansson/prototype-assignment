@@ -44,7 +44,7 @@ export default {
     },
     methods: {
         goToPickUp() {
-            this.$router.push({ path: 'pickup' });
+            this.$router.push({ path: 'patient-status' });
         }
     }
 }
