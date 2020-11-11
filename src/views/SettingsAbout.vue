@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <SettingsNav />
-    <SettingsHeader title="about" />
-    <section class="content">
+    <SettingsNav class="desktop-width" />
+    <SettingsHeader class="desktop-width" title="about" />
+    <section class="content desktop-width">
       <article>
         <button @click="showPolicy">Data Policy</button>
         <p v-if="policyShown">
@@ -223,4 +223,13 @@ export default {
     }
   }
 }
+@media only screen and (min-width: 768px) { 
+  .wrapper {
+    align-items: center;
+  }
+  .desktop-width {
+    max-width: 720px;
+  }
+}
+
 </style>
