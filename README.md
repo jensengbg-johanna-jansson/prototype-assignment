@@ -16,6 +16,9 @@ Appens utseende har uppdaterats något sedan prototypen. Bland annat har ambulan
 ### Uppdelning av arbete
 Vi har jobbat enligt scrum med kort i en GitHub Projects Kanban Board. Man har fått ta kort från sprint backlog och när man blir klar har man gått vidare med nästa kort. Vi har hjälpts åt att göra code reviews för varandra, där den som har haft tid har hoppat in och gjort code reviews.
 
+### Kvar att göra
+Vi har fokuserat mest på de sidor som vi tyckt är viktigast om man skulle testa appen, vilket innebär att vi lagt mindre tid på Settings med undersidor. Då vi inte haft tillräckligt med tid saknas därför desktop-versioner för undersidorna i Settings.
+
 ### Figma-prototyp
 
 https://www.figma.com/file/cxPP9s0RZneEEwPY1ME07z/Eezer-app-grupp-6?node-id=18%3A6336
