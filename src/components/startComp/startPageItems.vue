@@ -61,7 +61,7 @@ export default {
   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding-top: 7%;
+  padding-top: 5%;
 
   .btns {
     cursor: pointer;
